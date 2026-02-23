@@ -443,6 +443,38 @@
       flex-shrink: 0;
     }
 
+    /* ─── About credential badge strip ─────────────────────────── */
+    .about-badge-strip {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 1.75rem 0 2rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--white);
+      border-radius: 4px;
+      border: 1px solid var(--gray-mid);
+    }
+    .about-badge-strip img {
+      height: 60px;
+      width: auto;
+      flex-shrink: 0;
+    }
+    .about-cred-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .cred-tag {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      background: var(--cream);
+      border: 1px solid rgba(150,115,56,0.3);
+      padding: 0.35rem 0.8rem;
+      border-radius: 2px;
+      letter-spacing: 0.02em;
+    }
+
     /* ─── Testimonials ─────────────────────────────────────────── */
     #testimonials { background: var(--charcoal); }
 
@@ -870,6 +902,7 @@
         grid-template-columns: 1fr;
       }
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-badge-strip { flex-direction: column; align-items: flex-start; gap: 1rem; }
       .about-photo-wrap::before { display: none; }
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
@@ -917,8 +950,8 @@
       <li><a href="#about">About</a></li>
       <li><a href="#articles">Articles</a></li>
     </ul>
-    <button class="nav-newsletter" onclick="openNewsletter()">Newsletter</button>
-    <a class="nav-cta" href="https://calendly.com/chenchengwu88/30min" target="_blank">Schedule a Call</a>
+    <button class="nav-newsletter" onclick="openNewsletter()">Subscribe</button>
+    <a class="nav-cta" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Clarity Call</a>
     <div class="hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </div>
@@ -930,14 +963,14 @@
     <a href="#services"  onclick="closeMobile()">Services</a>
     <a href="#about"     onclick="closeMobile()">About</a>
     <a href="#articles"  onclick="closeMobile()">Articles</a>
-    <button class="mobile-newsletter" onclick="closeMobile(); openNewsletter();">Newsletter</button>
-    <a href="https://calendly.com/chenchengwu88/30min" target="_blank" class="btn" style="font-size:0.8rem;" onclick="closeMobile()">Schedule a Call →</a>
+    <button class="mobile-newsletter" onclick="closeMobile(); openNewsletter();">Subscribe</button>
+    <a href="https://calendly.com/chenchengwu88/30min" target="_blank" class="btn" style="font-size:0.8rem;" onclick="closeMobile()">Book a Clarity Call →</a>
   </div>
 
   <!-- ─── Hero ─── -->
   <section id="hero">
     <div class="hero-inner fade-in visible">
-      <h1>Clarity and Confidence<br/>in an <em>Uncertain AI Era</em></h1>
+      <h1>For Leaders Navigating Transition<br/>in an <em>Uncertain AI Era</em></h1>
       <div class="hero-statements">
         <p>You might be an engineering leader trying to build high-performance teams while navigating constant reorgs, shifting priorities, and rising expectations.</p>
         <p>You might be the only woman or minority in the room—carrying the quiet pressure to prove yourself, speak up, and belong.</p>
@@ -1009,7 +1042,16 @@
           <p>
             Along the way, I was promoted five times in ten years—while raising two children and navigating the added complexity of being a woman and minority leader in a male-dominated industry. I learned firsthand how to balance ambition with wellbeing, lead through uncertainty, and grow without burning out. Those experiences shape how I coach today.
           </p>
-          <a class="btn btn-outline" href="https://calendly.com/chenchengwu88/30min" target="_blank">Schedule a free intro session →</a>
+          <div class="about-badge-strip">
+            <img src="images/nlp-practitioner.png" alt="Certified NLP Practitioner" />
+            <div class="about-cred-tags">
+              <span class="cred-tag">Engineering Director, Instacart</span>
+              <span class="cred-tag">LinkedIn Scale-Up Leader</span>
+              <span class="cred-tag">NLP Certified Practitioner</span>
+              <span class="cred-tag">10+ Years Leadership Experience</span>
+            </div>
+          </div>
+          <a class="btn btn-outline" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Free Clarity Call →</a>
         </div>
       </div>
     </div>
@@ -1105,7 +1147,7 @@
       <div class="section-header fade-in">
         <p class="eyebrow">Thinking Out Loud</p>
         <h2>On leadership and clarity</h2>
-        <p>These pieces are for leaders who prefer thinking over advice.</p>
+        <p>Practical thinking on leadership, clarity, and navigating uncertainty. Updated regularly on Substack.</p>
         <div class="divider"></div>
       </div>
     </div><!-- end .container -->
@@ -1164,8 +1206,8 @@
       </div>
     </div>
     <div class="container" style="text-align:center; margin-top:2.5rem;">
-      <a class="btn btn-outline" href="https://cc12170503.substack.com/" target="_blank" rel="noopener">Read all articles on Substack →</a>
-    <div><!-- placeholder -->
+      <a class="btn" href="https://cc12170503.substack.com/" target="_blank" rel="noopener">Follow on Substack →</a>
+      <p style="margin-top:0.85rem; font-size:0.9rem; color:var(--text-light);">Free to read. No spam. Unsubscribe anytime.</p>
     </div>
   </section>
 
@@ -1173,7 +1215,7 @@
   <section id="cta">
     <p class="eyebrow">Ready When You Are</p>
     <h2>Let me help you turn<br/>uncertainty into clarity.</h2>
-    <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Schedule a Free Intro Session →</a>
+    <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Free Clarity Call →</a>
     <p class="cta-note">No pressure. Just a conversation.</p>
   </section>
 
