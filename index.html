@@ -655,6 +655,7 @@
     .article-card {
       background: var(--white);
       border-radius: 4px;
+      border-top: 3px solid var(--brown);
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -663,6 +664,13 @@
     .article-card:hover {
       box-shadow: 0 8px 32px rgba(0,0,0,0.08);
       transform: translateY(-3px);
+    }
+
+    .article-tag-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
     }
 
     .article-tag {
@@ -675,7 +683,26 @@
       border: 1px solid rgba(150,115,56,0.3);
       padding: 0.25rem 0.6rem;
       border-radius: 2px;
-      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .article-insight {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      background: rgba(150,115,56,0.06);
+      border-left: 3px solid var(--brown);
+      padding: 0.65rem 0.9rem;
+      margin-top: 1rem;
+      line-height: 1.6;
     }
 
     .article-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
@@ -805,12 +832,12 @@
     #cta {
       background: var(--charcoal);
       text-align: center;
-      padding: 8rem 2rem;
+      padding: 6rem 2rem;
     }
 
     #cta .eyebrow { color: var(--brown); }
     #cta h2 {
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(1.3rem, 2.8vw, 1.6rem);
       color: var(--white);
       margin-bottom: 1.25rem;
     }
@@ -980,7 +1007,6 @@
         <li><a href="#about">About</a></li>
         <li><a href="#articles">Articles</a></li>
       </ul>
-      <button class="nav-newsletter" onclick="openNewsletter()">Subscribe</button>
       <button class="nav-newsletter" onclick="openContact()">Contact</button>
       <a class="nav-cta" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Clarity Call</a>
     </div>
@@ -1215,50 +1241,74 @@
         <!-- Set 1 -->
         <div class="article-card">
           <div class="article-body">
-            <span class="article-tag">Leadership Presence</span>
+            <div class="article-tag-row">
+              <span class="article-tag">Leadership Presence</span>
+              <span class="article-meta">5 min read</span>
+            </div>
             <h3>Being Assertive Without Being Aggressive</h3>
-            <p>Many leaders receive feedback that they need to "speak up more" — but generic assertiveness advice rarely helps. This piece explores how to calibrate your presence by context: decisive with executives, clear with peers, and open with your team — without losing yourself.</p>
+            <p>Generic assertiveness advice rarely helps — this piece shows how to calibrate your presence by context: decisive with executives, open with your team.</p>
+            <div class="article-insight">"Real presence isn't louder—it's calibrated to context."</div>
             <a class="article-link" href="https://cc12170503.substack.com/p/being-assertive-without-being-aggressive" target="_blank" rel="noopener">Read the article</a>
           </div>
         </div>
         <div class="article-card">
           <div class="article-body">
-            <span class="article-tag">Team Development</span>
+            <div class="article-tag-row">
+              <span class="article-tag">Team Development</span>
+              <span class="article-meta">6 min read</span>
+            </div>
             <h3>The Hidden Scoreboard of Engineering Management</h3>
-            <p>New engineering managers often work harder than ever—yet still miss promotions because they're optimizing for the wrong things. This piece reveals the real measure of management success: not personal output, but your team's ability to perform and grow independently.</p>
+            <p>New engineering managers often miss promotions because they're measuring the wrong thing — learn what management success actually looks like.</p>
+            <div class="article-insight">"Your team's growth is your scoreboard, not your personal output."</div>
             <a class="article-link" href="https://cc12170503.substack.com/p/the-hidden-scoreboard-of-engineering" target="_blank" rel="noopener">Read the article</a>
           </div>
         </div>
         <div class="article-card">
           <div class="article-body">
-            <span class="article-tag">Career Growth</span>
+            <div class="article-tag-row">
+              <span class="article-tag">Career Growth</span>
+              <span class="article-meta">4 min read</span>
+            </div>
             <h3>From Victim to Agency</h3>
-            <p>There's a difference between feeling victimized—which is valid—and staying stuck in a victim narrative. This piece offers three practical mental shifts to reclaim agency without denying what's genuinely hard.</p>
+            <p>There's a difference between feeling victimized and staying stuck in that story — three practical mental shifts to reclaim agency.</p>
+            <div class="article-insight">"Acknowledging difficulty is not the same as staying stuck in it."</div>
             <a class="article-link" href="https://cc12170503.substack.com/p/from-victim-to-agency" target="_blank" rel="noopener">Read the article</a>
           </div>
         </div>
         <!-- Duplicate set for seamless loop -->
         <div class="article-card">
           <div class="article-body">
-            <span class="article-tag">Leadership Presence</span>
+            <div class="article-tag-row">
+              <span class="article-tag">Leadership Presence</span>
+              <span class="article-meta">5 min read</span>
+            </div>
             <h3>Being Assertive Without Being Aggressive</h3>
-            <p>Many leaders receive feedback that they need to "speak up more" — but generic assertiveness advice rarely helps. This piece explores how to calibrate your presence by context: decisive with executives, clear with peers, and open with your team — without losing yourself.</p>
+            <p>Generic assertiveness advice rarely helps — this piece shows how to calibrate your presence by context: decisive with executives, open with your team.</p>
+            <div class="article-insight">"Real presence isn't louder—it's calibrated to context."</div>
             <a class="article-link" href="https://cc12170503.substack.com/p/being-assertive-without-being-aggressive" target="_blank" rel="noopener">Read the article</a>
           </div>
         </div>
         <div class="article-card">
           <div class="article-body">
-            <span class="article-tag">Team Development</span>
+            <div class="article-tag-row">
+              <span class="article-tag">Team Development</span>
+              <span class="article-meta">6 min read</span>
+            </div>
             <h3>The Hidden Scoreboard of Engineering Management</h3>
-            <p>New engineering managers often work harder than ever—yet still miss promotions because they're optimizing for the wrong things. This piece reveals the real measure of management success: not personal output, but your team's ability to perform and grow independently.</p>
+            <p>New engineering managers often miss promotions because they're measuring the wrong thing — learn what management success actually looks like.</p>
+            <div class="article-insight">"Your team's growth is your scoreboard, not your personal output."</div>
             <a class="article-link" href="https://cc12170503.substack.com/p/the-hidden-scoreboard-of-engineering" target="_blank" rel="noopener">Read the article</a>
           </div>
         </div>
         <div class="article-card">
           <div class="article-body">
-            <span class="article-tag">Career Growth</span>
+            <div class="article-tag-row">
+              <span class="article-tag">Career Growth</span>
+              <span class="article-meta">4 min read</span>
+            </div>
             <h3>From Victim to Agency</h3>
-            <p>There's a difference between feeling victimized—which is valid—and staying stuck in a victim narrative. This piece offers three practical mental shifts to reclaim agency without denying what's genuinely hard.</p>
+            <p>There's a difference between feeling victimized and staying stuck in that story — three practical mental shifts to reclaim agency.</p>
+            <div class="article-insight">"Acknowledging difficulty is not the same as staying stuck in it."</div>
             <a class="article-link" href="https://cc12170503.substack.com/p/from-victim-to-agency" target="_blank" rel="noopener">Read the article</a>
           </div>
         </div>
@@ -1272,10 +1322,10 @@
 
   <!-- ─── Final CTA ─── -->
   <section id="cta">
-    <p class="eyebrow">Ready When You Are</p>
-    <h2>Let me help you turn<br/>uncertainty into clarity.</h2>
-    <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Free Clarity Call →</a>
-    <p class="cta-note">No pressure. Just a conversation.</p>
+    <p class="eyebrow">Something Resonate?</p>
+    <h2>If an article or my experience feels relevant to where you are, send me a message.</h2>
+    <button class="btn btn-light" onclick="openContact()">Send a Message →</button>
+    <p class="cta-note">I read every message and reply within 1–2 business days.</p>
   </section>
 
   <!-- ─── Footer ─── -->
@@ -1313,7 +1363,7 @@
       <p class="eyebrow" style="margin-bottom:0.5rem;">Let's Talk</p>
       <h2 style="font-size:1.5rem; margin-bottom:0.5rem; color:var(--charcoal);">Tell me a bit about where you are.</h2>
       <p style="font-size:0.9rem; color:var(--text-light); margin-bottom:1.5rem; line-height:1.7;">I'll follow up within 1–2 business days.</p>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+      <form action="https://formspree.io/f/xdalygwy" method="POST" class="contact-form">
         <div class="form-row">
           <input type="text"  name="name"  placeholder="Your name"  required />
           <input type="email" name="email" placeholder="Your email" required />
