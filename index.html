@@ -273,72 +273,33 @@
 
     /* ─── Bridge ──────────────────────────────────────────────── */
     #bridge {
-      background: var(--cream);
-      padding: 3.5rem 0;
+      background: linear-gradient(135deg, #1a1a2e 0%, #2D2D38 40%, #3d2e1e 100%);
+      padding: 4rem 2rem 5rem;
+      text-align: center;
+    }
+    .bridge-separator {
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background: var(--brown);
+      margin: 0 auto 3rem;
+      opacity: 0.6;
     }
     .bridge-signals {
-      max-width: 48rem;
+      max-width: 36rem;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 3rem;
     }
     .bridge-signals p {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      color: var(--charcoal);
-      line-height: 1.65;
-      font-style: italic;
-      padding-left: 1.5rem;
-      border-left: 2px solid var(--brown);
-    }
-    .bridge-lead-magnet {
-      margin-top: 0.25rem;
-      border-left: none;
-    }
-    .bridge-lead-magnet .lead-magnet-title {
       font-family: var(--sans);
-      font-size: 1rem;
-      color: var(--charcoal);
-      line-height: 1.5;
-      font-weight: 600;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.75;
       font-style: normal;
-      margin-bottom: 0.35rem;
-    }
-    .bridge-lead-magnet .lead-magnet-sub {
-      font-family: var(--sans);
-      font-size: 0.88rem;
-      color: var(--text-light);
-      font-style: normal;
-      line-height: 1.6;
-      margin-bottom: 0.75rem;
-    }
-    .lead-magnet-form {
-      display: flex;
-      gap: 0.5rem;
-      max-width: 26rem;
-    }
-    .lead-magnet-form input[type="email"] {
-      flex: 1;
-      padding: 0.6rem 0.85rem;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      border: 1px solid rgba(0,0,0,0.15);
-      border-radius: 4px;
-      outline: none;
-    }
-    .lead-magnet-form input[type="email"]:focus {
-      border-color: var(--brown);
-    }
-    .lead-magnet-form .btn {
-      white-space: nowrap;
-      padding: 0.6rem 1.1rem;
-      font-size: 0.8rem;
-    }
-    @media (max-width: 480px) {
-      .lead-magnet-form {
-        flex-direction: column;
-      }
+      font-weight: 300;
+      letter-spacing: 0.01em;
     }
 
     /* ─── Section Shared ───────────────────────────────────────── */
@@ -1005,6 +966,63 @@
       box-shadow: 0 0 0 6px rgba(255,255,255,0.2);
       transform: scale(0.98);
     }
+    .cta-guide-box {
+      max-width: 30rem;
+      margin: 1.5rem auto 0;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 1.75rem 2rem 1.5rem;
+      text-align: center;
+    }
+    .cta-guide-title {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.5;
+      margin: 0 0 0.35rem;
+    }
+    .cta-guide-sub {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      margin: 0 0 1rem;
+    }
+    .cta-guide-box .lead-magnet-form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .cta-guide-box .lead-magnet-form input[type="email"] {
+      flex: 1;
+      max-width: 14rem;
+      padding: 0.6rem 0.85rem;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--white);
+      outline: none;
+    }
+    .cta-guide-box .lead-magnet-form input[type="email"]::placeholder {
+      color: rgba(255,255,255,0.35);
+    }
+    .cta-guide-box .lead-magnet-form input[type="email"]:focus {
+      border-color: var(--brown);
+    }
+    .cta-guide-box .lead-magnet-form .btn-light {
+      padding: 0.6rem 1.1rem;
+      font-size: 0.8rem;
+      box-shadow: none;
+    }
+    @media (max-width: 480px) {
+      .cta-guide-box .lead-magnet-form {
+        flex-direction: column;
+      }
+      .cta-guide-box .lead-magnet-form input[type="email"] {
+        max-width: 100%;
+      }
+    }
 
     /* ─── Mobile sticky CTA ─────────────────────────────────────── */
     .mobile-cta-bar {
@@ -1161,22 +1179,12 @@
 
   <!-- ─── Bridge ─── -->
   <section id="bridge">
-    <div class="container">
-      <div class="bridge-signals">
-        <p>You're reaching for the next level, or you just landed there. Either way, what got you here won't get you there.</p>
-        <p>You've been told to "be more aggressive" — and then penalized when you do.</p>
-        <p>The higher you go, the fewer people you can be honest with.</p>
-        <p>You have a mentor and a sponsor — but neither of them can help with this.</p>
-        <div class="bridge-lead-magnet">
-          <p class="lead-magnet-title">IC, Manager, Director — They're Not Promotions. They're Different Jobs.</p>
-          <p class="lead-magnet-sub">A short guide on what actually changes at each level — and what nobody tells you until it's too late.</p>
-          <form class="lead-magnet-form" action="https://formspree.io/f/xdalygwy" method="POST">
-            <input type="hidden" name="_subject" value="Lead Magnet: IC Manager Director Guide" />
-            <input type="email" name="email" placeholder="Your email" required />
-            <button type="submit" class="btn">Get the free guide →</button>
-          </form>
-        </div>
-      </div>
+    <span class="bridge-separator"></span>
+    <div class="bridge-signals">
+      <p class="fade-in">You're reaching for the next level, or you just landed there. Either way, what got you here won't get you there.</p>
+      <p class="fade-in">You've been told to "be more aggressive" — and then penalized when you do.</p>
+      <p class="fade-in">The higher you go, the fewer people you can be honest with.</p>
+      <p class="fade-in">You have a mentor and a sponsor — but neither of them can help with this.</p>
     </div>
   </section>
 
@@ -1444,9 +1452,15 @@
 
     <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a free clarity call →</a>
     <p class="cta-or">not ready for a call?</p>
-    <button class="cta-email" onclick="openContact()" style="background:none; border:none; cursor:pointer; font-family:var(--sans);">Tell me what's going on — I'll respond personally</button>
-    <p class="cta-or">or</p>
-    <button class="cta-email" onclick="document.querySelector('#bridge .lead-magnet-form input').focus(); document.getElementById('bridge').scrollIntoView({behavior:'smooth'});" style="background:none; border:none; cursor:pointer; font-family:var(--sans);">Get the free guide →</button>
+    <div class="cta-guide-box">
+      <p class="cta-guide-title">IC, Manager, Director — They're Not Promotions. They're Different Jobs.</p>
+      <p class="cta-guide-sub">Get the free guide + join the newsletter</p>
+      <form class="lead-magnet-form" action="https://formspree.io/f/xdalygwy" method="POST">
+        <input type="hidden" name="_subject" value="Lead Magnet: IC Manager Director Guide" />
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit" class="btn btn-light">Get the guide →</button>
+      </form>
+    </div>
   </section>
 
   <!-- ─── Mobile sticky CTA ─── -->
