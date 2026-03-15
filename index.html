@@ -272,6 +272,29 @@
       margin-bottom: 2rem;
     }
 
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .hero-scroll::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.25);
+    }
+
     .hero-cta-note {
       font-size: 0.85rem;
       color: rgba(255,255,255,0.45);
@@ -1019,8 +1042,9 @@
       border-color: var(--brown);
     }
     .cta-guide-box .lead-magnet-form .btn-light {
-      padding: 0.6rem 1.1rem;
-      font-size: 0.8rem;
+      padding: 0.5rem 0.85rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
       box-shadow: none;
     }
     @media (max-width: 480px) {
@@ -1214,7 +1238,7 @@
         </div>
         <div class="for-card fade-in">
           <h3>The Rules Keep Changing</h3>
-          <p class="service-tagline">You're adapting as fast as you can — new skills, new expectations, new scoreboard. But the feedback doesn't match the effort, and nobody's telling you what actually matters at your level.</p>
+          <p class="service-tagline">You're adapting as fast as you can — new skills, new expectations, new scoreboard. But the feedback doesn't match the effort, and nobody's telling you how you're being evaluated.</p>
           <p class="service-work"><strong>We work on:</strong> reading the real scoreboard, understanding what your level actually demands, and building a leadership style that's yours — not a performance.</p>
         </div>
         <div class="for-card fade-in">
@@ -1292,7 +1316,7 @@
       <div class="testimonial-track" id="testimonialTrack">
         <!-- Set 1 — real testimonials -->
         <div class="t-card">
-          <div class="t-quote">"Working with Chencheng (Amy) has been transformative for both my career and my life."</div>
+          <div class="t-quote">"She supported me through three major transitions — from IC to Tech Lead Manager to Senior Engineering Manager — helping me navigate each one with clarity."</div>
           <div class="t-detail">She supported me through major transitions — from IC to Tech Lead Manager to Senior Engineering Manager — helping me navigate new roles, build credibility with teams, and make clearer, more intentional decisions.</div>
           <div class="t-author">
             <img src="images/christina.jpg" class="t-avatar-img" alt="Christina Xu" />
@@ -1314,7 +1338,7 @@
           </div>
         </div>
         <div class="t-card">
-          <div class="t-quote">"The clarity and confidence I gained from her coaching continue to shape how I approach work, leadership, and life."</div>
+          <div class="t-quote">"She helped me see firsthand the value of coaching — one of the reasons I cofounded Leland."</div>
           <div class="t-detail">What truly sets her apart is her ability to see potential in people and help them unlock it — one of the reasons I cofounded Leland, as she helped me see firsthand the value of coaching.</div>
           <div class="t-author">
             <img src="images/jiashuo.jpg" class="t-avatar-img" alt="Jiashuo Wang" />
@@ -1325,7 +1349,7 @@
           </div>
         </div>
         <div class="t-card">
-          <div class="t-quote">"Working with Chencheng (Amy) has been truly transformative."</div>
+          <div class="t-quote">"She helps you see both the immediate path forward and the leader you're capable of becoming."</div>
           <div class="t-detail">She brings exceptional clarity to complex situations and helps you see both the immediate path forward and the leader you're capable of becoming. She challenges you in the right ways while building lasting confidence.</div>
           <div class="t-author">
             <img src="images/benji.jpg" class="t-avatar-img" alt="Benjamin Peyrot" />
@@ -1337,7 +1361,7 @@
         </div>
         <!-- Duplicate set for seamless loop -->
         <div class="t-card">
-          <div class="t-quote">"Working with Chencheng (Amy) has been transformative for both my career and my life."</div>
+          <div class="t-quote">"She supported me through three major transitions — from IC to Tech Lead Manager to Senior Engineering Manager — helping me navigate each one with clarity."</div>
           <div class="t-detail">She supported me through major transitions — from IC to Tech Lead Manager to Senior Engineering Manager — helping me navigate new roles, build credibility with teams, and make clearer, more intentional decisions.</div>
           <div class="t-author">
             <img src="images/christina.jpg" class="t-avatar-img" alt="Christina Xu" />
@@ -1359,7 +1383,7 @@
           </div>
         </div>
         <div class="t-card">
-          <div class="t-quote">"The clarity and confidence I gained from her coaching continue to shape how I approach work, leadership, and life."</div>
+          <div class="t-quote">"She helped me see firsthand the value of coaching — one of the reasons I cofounded Leland."</div>
           <div class="t-detail">What truly sets her apart is her ability to see potential in people and help them unlock it — one of the reasons I cofounded Leland, as she helped me see firsthand the value of coaching.</div>
           <div class="t-author">
             <img src="images/jiashuo.jpg" class="t-avatar-img" alt="Jiashuo Wang" />
@@ -1370,7 +1394,7 @@
           </div>
         </div>
         <div class="t-card">
-          <div class="t-quote">"Working with Chencheng (Amy) has been truly transformative."</div>
+          <div class="t-quote">"She helps you see both the immediate path forward and the leader you're capable of becoming."</div>
           <div class="t-detail">She brings exceptional clarity to complex situations and helps you see both the immediate path forward and the leader you're capable of becoming. She challenges you in the right ways while building lasting confidence.</div>
           <div class="t-author">
             <img src="images/benji.jpg" class="t-avatar-img" alt="Benjamin Peyrot" />
@@ -1462,12 +1486,12 @@
     <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a free clarity call →</a>
     <p class="cta-or">not ready for a call?</p>
     <div class="cta-guide-box">
-      <p class="cta-guide-title">The Career You Planned For Doesn't Exist Anymore. Now What?</p>
+      <p class="cta-guide-title">The Scoreboard Nobody Shows You</p>
       <p class="cta-guide-sub">Get the free guide + join the newsletter</p>
       <form class="lead-magnet-form" action="https://formspree.io/f/xdalygwy" method="POST">
         <input type="hidden" name="_subject" value="Lead Magnet: Career Guide" />
         <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit" class="btn btn-light">Get the guide →</button>
+        <button type="submit" class="btn btn-light">Download your guide</button>
       </form>
     </div>
   </section>
