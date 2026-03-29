@@ -610,140 +610,128 @@
     #testimonials .section-header p  { color: var(--text-light); }
     #testimonials .eyebrow           { color: rgba(150,115,56,0.8); }
 
-    .testimonial-track-wrap {
-      overflow: hidden;
+    .testimonial-carousel {
+      max-width: 760px;
+      margin: 0 auto;
       position: relative;
-      margin: 0 -2rem;
-      padding: 0 2rem;
+      min-height: 260px;
     }
 
-    .testimonial-track-wrap::before,
-    .testimonial-track-wrap::after {
-      content: '';
+    .testimonial-slide {
       position: absolute;
-      top: 0; bottom: 0;
-      width: 6rem;
-      z-index: 1;
-      pointer-events: none;
-    }
-    .testimonial-track-wrap::before {
+      top: 0;
       left: 0;
-      background: linear-gradient(to right, var(--gray-light), transparent);
+      width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.7s ease-in-out;
     }
-    .testimonial-track-wrap::after {
-      right: 0;
-      background: linear-gradient(to left, var(--gray-light), transparent);
+    .testimonial-slide.active {
+      position: relative;
+      opacity: 1;
+      pointer-events: auto;
     }
 
-    .testimonial-track {
-      display: flex;
-      gap: 1.75rem;
-      width: max-content;
-      animation: marquee 40s linear infinite;
-      cursor: grab;
+    .testimonial-slide blockquote {
+      padding-left: 2rem;
+      border-left: 3px solid var(--brown);
+      margin: 0;
     }
-    .testimonial-track.stopped {
-      animation: none;
-      transition: transform 0.4s ease;
-    }
-    .testimonial-track:active { cursor: grabbing; }
 
-    @keyframes marquee {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    .testimonial-slide .t-open-quote {
+      font-family: var(--serif);
+      font-size: 4rem;
+      line-height: 0.5;
+      color: var(--brown);
+      opacity: 0.2;
+      margin-bottom: 0.75rem;
+      margin-left: -0.25rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .testimonial-slide blockquote p {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+
+    .testimonial-slide cite {
+      display: block;
+      font-style: normal;
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin-left: 2rem;
+    }
+    .testimonial-slide .t-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+    .testimonial-slide .t-title {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 0.2rem;
+      font-weight: 500;
     }
 
     .t-nav {
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .t-nav-btn {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      border: 1px solid rgba(0,0,0,0.12);
-      background: var(--white);
-      cursor: pointer;
-      font-size: 1rem;
-      color: var(--charcoal);
-      display: flex;
       align-items: center;
       justify-content: center;
-      transition: border-color 0.2s, color 0.2s;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
     }
-    .t-nav-btn:hover {
-      border-color: var(--brown);
+
+    .t-nav-arrow {
+      padding: 0.5rem;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
       color: var(--brown);
-    }
-
-    .t-card {
-      width: 340px;
-      background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(150,115,56,0.18);
-      border-radius: 6px;
-      padding: 2.25rem;
-      flex-shrink: 0;
-    }
-
-    .t-quote {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--charcoal);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .t-detail {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--gray-mid);
-    }
-
-    .t-author {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-    }
-
-    .t-avatar {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background: var(--brown);
+      cursor: pointer;
+      transition: background 0.2s;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--serif);
-      font-size: 0.85rem;
-      color: var(--white);
-      flex-shrink: 0;
+    }
+    .t-nav-arrow:hover {
+      background: rgba(150,115,56,0.1);
+    }
+    .t-nav-arrow svg {
+      width: 1.25rem;
+      height: 1.25rem;
     }
 
-    .t-name {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--charcoal);
-      letter-spacing: 0.02em;
+    .t-dots {
+      display: flex;
+      gap: 0.6rem;
     }
-    .t-title {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-top: 0.1rem;
+    .t-dot {
+      height: 0.5rem;
+      width: 0.5rem;
+      border-radius: 9999px;
+      border: none;
+      background: rgba(150,115,56,0.25);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+    .t-dot:hover {
+      background: rgba(150,115,56,0.45);
+    }
+    .t-dot.active {
+      width: 2rem;
+      background: var(--brown);
     }
 
-    /* ─── t-avatar image ───────────────────────────────────────── */
-    .t-avatar-img {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
+    @media (max-width: 600px) {
+      .t-nav-arrow { display: none; }
+      .testimonial-slide blockquote { padding-left: 1.25rem; }
+      .testimonial-slide cite { margin-left: 1.25rem; }
+      .testimonial-slide blockquote p { font-size: 1.05rem; }
     }
 
     /* ─── Articles ─────────────────────────────────────────────── */
@@ -1030,9 +1018,9 @@
     .cta-guide-box {
       max-width: 24rem;
       margin: 1.5rem auto 0;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      padding: 1.25rem 1.5rem 1.25rem;
+      border: none;
+      border-radius: 0;
+      padding: 1.25rem 0 0;
       text-align: center;
     }
     .cta-guide-title {
@@ -1192,8 +1180,7 @@
     }
 
     @media (max-width: 480px) {
-      .t-card { width: 280px; }
-      .article-track .article-card { width: 290px; }
+.article-track .article-card { width: 290px; }
     }
   </style>
 </head>
@@ -1234,7 +1221,7 @@
       <h1>I Help Tech Leaders See What's <em>Really Holding Them Back</em></h1>
       <p class="hero-sub">Your playbook stopped working — and you can't tell if the problem is you or where you are.</p>
       <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
-      <p class="hero-cta-note">Free. 30 minutes. No pressure. Completely confidential.</p>
+      <p class="hero-cta-note">I take on a small number of new clients each quarter &mdash; let's have a free strategy session to decide the fit.</p>
     </div>
   </section>
 
@@ -1332,108 +1319,68 @@
     <div class="container">
       <div class="section-header fade-in">
         <p class="eyebrow">In Their Words</p>
-        <h2>What clients say</h2>
-        <p>From engineering leaders, managers, and founders who've done the work.</p>
-        <div class="divider" style="background:rgba(150,115,56,0.5)"></div>
       </div>
-    </div>
-    <div class="testimonial-track-wrap">
-      <div class="testimonial-track" id="testimonialTrack">
-        <!-- Set 1 — real testimonials -->
-        <div class="t-card">
-          <div class="t-quote">"She supported me through three major transitions — from IC to Tech Lead Manager to Senior Engineering Manager — helping me navigate each one with clarity."</div>
-          <div class="t-detail">She supported me through major transitions — from IC to Tech Lead Manager to Senior Engineering Manager — helping me navigate new roles, build credibility with teams, and make clearer, more intentional decisions.</div>
-          <div class="t-author">
-            <img src="images/christina.jpg" class="t-avatar-img" alt="Christina Xu" />
-            <div>
-              <div class="t-name">Christina Xu</div>
-              <div class="t-title">Senior Engineering Manager, Instacart</div>
-            </div>
-          </div>
+
+      <div class="testimonial-carousel" id="testimonialCarousel">
+        <div class="testimonial-slide active">
+          <blockquote>
+            <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
+            <p>Working with Chencheng has been transformative for both my career and my life. She supported me through major transitions &mdash; from IC to Tech Lead Manager to Senior Engineering Manager &mdash; helping me grow into a more confident, grounded, and effective leader. Her coaching helped me navigate new roles, build credibility with teams, and make clearer, more intentional decisions.</p>
+          </blockquote>
+          <cite>
+            <span class="t-name">Christina Xu</span>
+            <span class="t-title">Senior Engineering Manager, Instacart</span>
+          </cite>
         </div>
-        <div class="t-card">
-          <div class="t-quote">"What sets her apart is how tailored her coaching is — she doesn't offer generic advice, but highly relevant, context-rich guidance specific to my situation."</div>
-          <div class="t-detail">Whether I was navigating performance calibration, difficult stakeholder dynamics, or complex managerial decisions, Amy was able to help me navigate effectively with thoughtful, experience-based guidance.</div>
-          <div class="t-author">
-            <img src="images/chang.jpg" class="t-avatar-img" alt="Chang Xu" />
-            <div>
-              <div class="t-name">Chang Xu</div>
-              <div class="t-title">Senior Principal Engineer/Manager, Roblox</div>
-            </div>
-          </div>
+
+        <div class="testimonial-slide">
+          <blockquote>
+            <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
+            <p>What sets her apart is how tailored her coaching is &mdash; she doesn't offer generic advice, but highly relevant, context-rich guidance specific to my situation. Whether I was navigating performance calibration, difficult stakeholder dynamics, or complex managerial decisions, Amy was able to help me navigate effectively. She offers thoughtful, experience-based guidance that is both strategic and deeply supportive.</p>
+          </blockquote>
+          <cite>
+            <span class="t-name">Chang Xu</span>
+            <span class="t-title">Senior Principal Engineer/Manager, Roblox</span>
+          </cite>
         </div>
-        <div class="t-card">
-          <div class="t-quote">"She helped me see firsthand the value of coaching — one of the reasons I cofounded Leland."</div>
-          <div class="t-detail">What truly sets her apart is her ability to see potential in people and help them unlock it — one of the reasons I cofounded Leland, as she helped me see firsthand the value of coaching.</div>
-          <div class="t-author">
-            <img src="images/jiashuo.jpg" class="t-avatar-img" alt="Jiashuo Wang" />
-            <div>
-              <div class="t-name">Jiashuo Wang</div>
-              <div class="t-title">CoFounder, Leland</div>
-            </div>
-          </div>
+
+        <div class="testimonial-slide">
+          <blockquote>
+            <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
+            <p>The clarity and confidence I gained from her coaching continue to shape how I approach work, leadership, and life. Her approach consistently pushed me to stretch beyond my comfort zone while building real confidence along the way. What truly sets her apart is her ability to see potential in people and help them unlock it &mdash; one of the reasons I cofounded Leland.</p>
+          </blockquote>
+          <cite>
+            <span class="t-name">Jiashuo Wang</span>
+            <span class="t-title">CoFounder, Leland</span>
+          </cite>
         </div>
-        <div class="t-card">
-          <div class="t-quote">"She helps you see both the immediate path forward and the leader you're capable of becoming."</div>
-          <div class="t-detail">She brings exceptional clarity to complex situations and helps you see both the immediate path forward and the leader you're capable of becoming. She challenges you in the right ways while building lasting confidence.</div>
-          <div class="t-author">
-            <img src="images/benji.jpg" class="t-avatar-img" alt="Benjamin Peyrot" />
-            <div>
-              <div class="t-name">Benjamin Peyrot</div>
-              <div class="t-title">Staff Software Engineer, Instacart</div>
-            </div>
-          </div>
-        </div>
-        <!-- Duplicate set for seamless loop -->
-        <div class="t-card">
-          <div class="t-quote">"She supported me through three major transitions — from IC to Tech Lead Manager to Senior Engineering Manager — helping me navigate each one with clarity."</div>
-          <div class="t-detail">She supported me through major transitions — from IC to Tech Lead Manager to Senior Engineering Manager — helping me navigate new roles, build credibility with teams, and make clearer, more intentional decisions.</div>
-          <div class="t-author">
-            <img src="images/christina.jpg" class="t-avatar-img" alt="Christina Xu" />
-            <div>
-              <div class="t-name">Christina Xu</div>
-              <div class="t-title">Senior Engineering Manager, Instacart</div>
-            </div>
-          </div>
-        </div>
-        <div class="t-card">
-          <div class="t-quote">"What sets her apart is how tailored her coaching is — she doesn't offer generic advice, but highly relevant, context-rich guidance specific to my situation."</div>
-          <div class="t-detail">Whether I was navigating performance calibration, difficult stakeholder dynamics, or complex managerial decisions, Amy was able to help me navigate effectively with thoughtful, experience-based guidance.</div>
-          <div class="t-author">
-            <img src="images/chang.jpg" class="t-avatar-img" alt="Chang Xu" />
-            <div>
-              <div class="t-name">Chang Xu</div>
-              <div class="t-title">Senior Principal Engineer/Manager, Roblox</div>
-            </div>
-          </div>
-        </div>
-        <div class="t-card">
-          <div class="t-quote">"She helped me see firsthand the value of coaching — one of the reasons I cofounded Leland."</div>
-          <div class="t-detail">What truly sets her apart is her ability to see potential in people and help them unlock it — one of the reasons I cofounded Leland, as she helped me see firsthand the value of coaching.</div>
-          <div class="t-author">
-            <img src="images/jiashuo.jpg" class="t-avatar-img" alt="Jiashuo Wang" />
-            <div>
-              <div class="t-name">Jiashuo Wang</div>
-              <div class="t-title">CoFounder, Leland</div>
-            </div>
-          </div>
-        </div>
-        <div class="t-card">
-          <div class="t-quote">"She helps you see both the immediate path forward and the leader you're capable of becoming."</div>
-          <div class="t-detail">She brings exceptional clarity to complex situations and helps you see both the immediate path forward and the leader you're capable of becoming. She challenges you in the right ways while building lasting confidence.</div>
-          <div class="t-author">
-            <img src="images/benji.jpg" class="t-avatar-img" alt="Benjamin Peyrot" />
-            <div>
-              <div class="t-name">Benjamin Peyrot</div>
-              <div class="t-title">Staff Software Engineer, Instacart</div>
-            </div>
-          </div>
+
+        <div class="testimonial-slide">
+          <blockquote>
+            <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
+            <p>Working with Chencheng has been truly transformative. She brings exceptional clarity to complex situations and helps you see both the immediate path forward and the leader you're capable of becoming. Her coaching is deeply insightful, practical, and grounded in real leadership experience. She challenges you in the right ways while building lasting confidence and impact.</p>
+          </blockquote>
+          <cite>
+            <span class="t-name">Benjamin Peyrot</span>
+            <span class="t-title">Staff Software Engineer, Instacart</span>
+          </cite>
         </div>
       </div>
-    </div>
-    <div class="t-nav">
-      <button class="t-nav-btn" id="tPrev" aria-label="Previous">&#8592;</button>
-      <button class="t-nav-btn" id="tNext" aria-label="Next">&#8594;</button>
+
+      <div class="t-nav">
+        <button class="t-nav-arrow" id="tPrev" aria-label="Previous testimonial">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div class="t-dots" id="tDots">
+          <button class="t-dot active" aria-label="Go to testimonial 1" aria-current="true"></button>
+          <button class="t-dot" aria-label="Go to testimonial 2"></button>
+          <button class="t-dot" aria-label="Go to testimonial 3"></button>
+          <button class="t-dot" aria-label="Go to testimonial 4"></button>
+        </div>
+        <button class="t-nav-arrow" id="tNext" aria-label="Next testimonial">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -1498,7 +1445,7 @@
       <div class="cta-timeline-step">
         <span class="cta-step-num">1</span>
         <h4>Clarity Call</h4>
-        <p>Free. 30 minutes. No pressure.</p>
+        <p>Free. 30 minutes. Let's decide the fit.</p>
       </div>
       <div class="cta-timeline-step">
         <span class="cta-step-num">2</span>
@@ -1512,10 +1459,8 @@
       </div>
     </div>
 
-    <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
-    <p class="cta-or">not ready for a call?</p>
     <div class="cta-guide-box">
-      <p class="cta-guide-title">Subscribe to the newsletter & download the Leadership Playbook</p>
+      <p class="cta-guide-title">Subscribe to my newsletter & download the Leadership Playbook</p>
       <form class="lead-magnet-form" action="https://formspree.io/f/xdalygwy" method="POST">
         <input type="hidden" name="_subject" value="Newsletter + Leadership Playbook" />
         <input type="email" name="email" placeholder="Your email" required />
@@ -1523,11 +1468,6 @@
       </form>
     </div>
   </section>
-
-  <!-- ─── Mobile sticky CTA ─── -->
-  <div class="mobile-cta-bar">
-    <a href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Free Clarity Call →</a>
-  </div>
 
   <!-- ─── Footer ─── -->
   <footer>
@@ -1571,12 +1511,11 @@
           <input type="email" name="email" placeholder="Your email" required />
         </div>
         <select name="challenge" required>
-          <option value="" disabled selected>What's your primary challenge?</option>
-          <option value="transition">Navigating a promotion or role transition</option>
-          <option value="rules">Figuring out the unwritten rules at my level</option>
-          <option value="politics">Managing politics and visibility</option>
-          <option value="crossroads">Career crossroads — stay, leave, or something else</option>
-          <option value="other">Something else</option>
+          <option value="" disabled selected>What's going on?</option>
+          <option value="change">Something has to change — but I'm not sure what</option>
+          <option value="rules">The rules keep changing — and no one's telling me how I'm being evaluated</option>
+          <option value="lonely">The room got quieter — I need a thinking partner</option>
+          <option value="unsure">I'm not sure yet — I just know I need to talk to someone</option>
         </select>
         <textarea name="message" rows="4" placeholder="Briefly describe what's going on and what you're hoping for..." required></textarea>
         <button type="submit" class="btn" style="width:100%; margin-top:0.25rem;">Send Message →</button>
@@ -1615,97 +1554,40 @@
 
     /* ── Testimonial carousel ── */
     (function() {
-      const track = document.getElementById('testimonialTrack');
-      const wrap = track.parentElement;
-      const prevBtn = document.getElementById('tPrev');
-      const nextBtn = document.getElementById('tNext');
-      const cardWidth = 340 + 28; // card width + gap
-      let currentIndex = 0;
-      let stopped = false;
+      var slides = document.querySelectorAll('.testimonial-slide');
+      var dots = document.querySelectorAll('.t-dot');
+      var prevBtn = document.getElementById('tPrev');
+      var nextBtn = document.getElementById('tNext');
+      var current = 0;
+      var total = slides.length;
 
-      function stopMarquee() {
-        if (stopped) return;
-        stopped = true;
-        // Capture current visual position before stopping animation
-        const style = getComputedStyle(track);
-        const matrix = new DOMMatrix(style.transform);
-        const currentX = matrix.m41;
-        track.classList.add('stopped');
-        track.style.transform = 'translateX(' + currentX + 'px)';
-        // Figure out which card index we're closest to
-        currentIndex = Math.round(Math.abs(currentX) / cardWidth);
+      function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        dots[current].removeAttribute('aria-current');
+        current = (index + total) % total;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+        dots[current].setAttribute('aria-current', 'true');
       }
 
-      function scrollTo(index) {
-        const maxIndex = 4; // 4 real cards (0-3), ignore duplicates
-        currentIndex = Math.max(0, Math.min(index, maxIndex - 1));
-        track.style.transform = 'translateX(' + (-currentIndex * cardWidth) + 'px)';
-      }
+      prevBtn.addEventListener('click', function() { goTo(current - 1); });
+      nextBtn.addEventListener('click', function() { goTo(current + 1); });
 
-      prevBtn.addEventListener('click', function() {
-        stopMarquee();
-        scrollTo(currentIndex - 1);
-      });
-      nextBtn.addEventListener('click', function() {
-        stopMarquee();
-        scrollTo(currentIndex + 1);
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() { goTo(i); });
       });
 
-      // Drag support (mouse + touch)
-      let startX = 0;
-      let startTransform = 0;
-      let dragging = false;
-
-      function dragStart(x) {
-        stopMarquee();
-        dragging = true;
-        startX = x;
-        startTransform = -currentIndex * cardWidth;
-        track.style.transition = 'none';
-      }
-
-      function dragMove(x) {
-        if (!dragging) return;
-        const diff = x - startX;
-        track.style.transform = 'translateX(' + (startTransform + diff) + 'px)';
-      }
-
-      function dragEnd(x) {
-        if (!dragging) return;
-        dragging = false;
-        track.style.transition = 'transform 0.4s ease';
-        const diff = x - startX;
-        if (diff < -50) scrollTo(currentIndex + 1);
-        else if (diff > 50) scrollTo(currentIndex - 1);
-        else scrollTo(currentIndex);
-      }
-
-      // Mouse events
-      track.addEventListener('mousedown', function(e) {
-        e.preventDefault();
-        dragStart(e.clientX);
-      });
-      window.addEventListener('mousemove', function(e) {
-        dragMove(e.clientX);
-      });
-      window.addEventListener('mouseup', function(e) {
-        dragEnd(e.clientX);
-      });
-
-      // Touch events
-      track.addEventListener('touchstart', function(e) {
-        dragStart(e.touches[0].clientX);
+      // Touch swipe support
+      var startX = 0;
+      var carousel = document.getElementById('testimonialCarousel');
+      carousel.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
       }, { passive: true });
-      track.addEventListener('touchmove', function(e) {
-        dragMove(e.touches[0].clientX);
-      }, { passive: true });
-      track.addEventListener('touchend', function(e) {
-        dragEnd(e.changedTouches[0].clientX);
-      });
-
-      // Prevent click on links/buttons after drag
-      track.addEventListener('click', function(e) {
-        if (Math.abs(e.clientX - startX) > 5) e.preventDefault();
+      carousel.addEventListener('touchend', function(e) {
+        var diff = e.changedTouches[0].clientX - startX;
+        if (diff < -50) goTo(current + 1);
+        else if (diff > 50) goTo(current - 1);
       });
     })();
 
