@@ -548,6 +548,33 @@
       font-weight: 600;
     }
 
+    .about-approach {
+      list-style: none;
+      margin: 0.5rem 0 1.25rem;
+      padding: 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .about-approach li {
+      font-size: 0.98rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .about-approach li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 6px;
+      height: 6px;
+      background: var(--brown);
+      border-radius: 50%;
+    }
+
     /* ─── About credential badge strip ─────────────────────────── */
     .about-badge-strip {
       display: flex;
@@ -1217,8 +1244,8 @@
   <!-- ─── Hero ─── -->
   <section id="hero">
     <div class="hero-inner fade-in visible">
-      <h1>I Help Tech Leaders See What's <em>Really Holding Them Back</em></h1>
-      <p class="hero-sub">Your playbook stopped working — and you can't tell if the problem is you or where you are.</p>
+      <h1>I Help Tech Professionals See What's <em>Really Holding Them Back</em></h1>
+      <p class="hero-sub">Most people think leadership is something you grow into at a certain level. I believe it's a foundation &mdash; a mindset for navigating ambiguity, making better decisions, and designing both your career and your life &mdash; no matter where you are.</p>
       <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
       <p class="hero-cta-note">I take on a small number of new clients each quarter &mdash; let's have a free strategy session to decide the fit.</p>
     </div>
@@ -1228,10 +1255,11 @@
   <section id="bridge">
     <span class="bridge-separator"></span>
     <div class="bridge-signals">
-      <p class="fade-in">You want to move up — but you can't figure out why you're not getting picked.</p>
-      <p class="fade-in">You're thinking about leaving — but you can't tell if it's the right call or just a rough quarter.</p>
-      <p class="fade-in">Something is off — but you don't know if it's you, your org, or your industry.</p>
-      <p class="fade-in">I help you build the bridge between where you are and where you're heading — with clarity on what's actually in the way.</p>
+      <p class="fade-in">You've done everything right &mdash; but the path forward stopped being obvious.</p>
+      <p class="fade-in">You know what you're not great at &mdash; and you're afraid it's about to show up that changes how people see you.</p>
+      <p class="fade-in">You're getting feedback that doesn't add up &mdash; and you're wondering if you should fight for it or walk away.</p>
+      <p class="fade-in">Something is off &mdash; but you don't know if it's you, your org, or your industry.</p>
+      <p class="fade-in">I help you see what's actually in the way &mdash; and build the clarity to move through it.</p>
     </div>
   </section>
 
@@ -1278,7 +1306,7 @@
             />
           </div>
           <p>
-            Over a decade at LinkedIn and Instacart, I was promoted five times. Each one required becoming a different kind of leader:
+            Drawing from 10+ years at LinkedIn and Instacart &mdash; where I grew from IC to Engineering Director leading 50+ engineers &mdash; I bring an insider understanding of how performance, promotion, and influence actually work inside tech organizations. Each transition required becoming a different kind of leader:
           </p>
           <ul class="about-transitions">
             <li><strong>IC to Tech Lead</strong> — it stopped being about my code</li>
@@ -1288,7 +1316,10 @@
             <li><strong>Director to Builder</strong> — I walked away from the title and started building again</li>
           </ul>
           <p>
-            I navigated all of them as often the only Asian and woman in the room — which meant less room to figure it out in public. I coach from pattern recognition, not frameworks or clichés — I've likely lived some version of what you're facing.
+            I navigated all of them as often the only Asian and woman in the room &mdash; which meant less room to figure it out in public.
+          </p>
+          <p>
+            I coach from pattern recognition, not frameworks or clichés. I help clients clarify what's really being asked, spot the patterns that are hard to see from the inside, and move forward with clarity and intention.
           </p>
           <div class="about-badge-strip">
             <p class="about-logos-label">Formerly at</p>
@@ -1459,7 +1490,7 @@
     </div>
 
     <div class="cta-guide-box">
-      <p class="cta-guide-title">Subscribe to my newsletter & download the Leadership Playbook</p>
+      <p class="cta-guide-title">Subscribe to my newsletter and sharpen your leadership mindset</p>
       <form class="lead-magnet-form" action="https://formspree.io/f/xdalygwy" method="POST">
         <input type="hidden" name="_subject" value="Newsletter + Leadership Playbook" />
         <input type="email" name="email" placeholder="Your email" required />
