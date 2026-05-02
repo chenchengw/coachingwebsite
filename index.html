@@ -302,6 +302,22 @@
       letter-spacing: 0.04em;
     }
 
+    .hero-secondary-cta {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 1rem;
+      letter-spacing: 0.04em;
+    }
+    .hero-secondary-cta a {
+      color: var(--white);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      padding-bottom: 1px;
+      transition: border-color 0.2s ease;
+    }
+    .hero-secondary-cta a:hover {
+      border-bottom-color: var(--white);
+    }
+
     /* ─── Bridge ──────────────────────────────────────────────── */
     #bridge {
       background: linear-gradient(135deg, #1a1a2e 0%, #2D2D38 40%, #3d2e1e 100%);
@@ -1220,6 +1236,7 @@
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
         <li><a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener">Newsletter</a></li>
       </ul>
       <button class="nav-newsletter" onclick="openContact()">Contact</button>
@@ -1235,6 +1252,7 @@
     <div class="mobile-close" id="mobileClose">✕</div>
     <a href="#services"  onclick="closeMobile()">Services</a>
     <a href="#about"     onclick="closeMobile()">About</a>
+    <a href="#toolkit"   onclick="closeMobile()">Toolkit</a>
     <a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener" onclick="closeMobile()">Newsletter</a>
     <button class="mobile-newsletter" onclick="closeMobile(); openNewsletter();">Subscribe</button>
     <button class="mobile-newsletter" onclick="closeMobile(); openContact();">Contact</button>
@@ -1244,11 +1262,12 @@
   <!-- ─── Hero ─── -->
   <section id="hero">
     <div class="hero-inner fade-in visible">
-      <h1>I Help Tech Professionals Navigate the <em>Inflection Points That Change Who You Are</em></h1>
-      <p class="hero-sub">What's keeping you up isn't the next promotion. It's whether the path you've spent a decade on still leads where you thought.</p>
-      <p class="hero-sub" style="margin-top:0.5rem;">I help you see the game you're actually in, choose what you're playing for, and play with confidence.</p>
+      <h1>I Help High Achievers Build the <em>Strength to Meet Their Inflection Point</em></h1>
+      <p class="hero-sub">What's keeping you up is whether the path you've spent a decade on still leads where you thought.</p>
+      <p class="hero-sub" style="margin-top:0.5rem;">I help you see what you're already great at, what's worth doubling down on, and what to let go of &mdash; so you move forward from strength, with the confidence to navigate the AI era.</p>
       <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
       <p class="hero-cta-note">I take on a small number of new clients each quarter &mdash; let's have a free strategy session to decide the fit.</p>
+      <p class="hero-secondary-cta">Not ready for a session? <a href="#toolkit">Get the free 3-Shift Check-In &rarr;</a></p>
     </div>
   </section>
 
@@ -1258,7 +1277,7 @@
     <div class="bridge-signals">
       <p class="fade-in">You feel something is off &mdash; but you don't know if it's you, your org, or your industry.</p>
       <p class="fade-in">You're doing everything right &mdash; and the recognition keeps coming up short.</p>
-      <p class="fade-in">You used to know what three years out looked like. Now eighteen months feels like a guess.</p>
+      <p class="fade-in">You're still doing what got you here &mdash; shipping more, sharper alignment, deeper specialty &mdash; and starting to wonder which still belongs.</p>
       <p class="fade-in">You're the one everyone brings their hard problems to &mdash; and there's no one left to bring you yours.</p>
     </div>
   </section>
@@ -1319,7 +1338,7 @@
             I navigated all of them as often the only Asian and woman in the room &mdash; which meant less room to figure it out in public.
           </p>
           <p>
-            I used this framework to navigate my five identity rewrites: <strong>you learn to see the game you're actually in, choose what you're playing for, and play your game with confidence.</strong> I help clients clarify what's really being asked, spot the patterns that are hard to see from the inside, and move forward with clarity and intention. That's the shape of the work.
+            What carried me through each rewrite was the same pattern: <strong>seeing what I was already great at, doubling down on what was worth building, and letting go of what no longer fit.</strong> I help clients do the same &mdash; clarifying what's really being asked, surfacing what's hiding in plain sight, and moving forward from strength, not catch-up. That's the shape of the work.
           </p>
           <div class="about-badge-strip">
             <p class="about-logos-label">Formerly at</p>
@@ -1513,12 +1532,14 @@
       </div>
     </div>
 
-    <div class="cta-guide-box">
-      <p class="cta-guide-title">Subscribe to my newsletter and sharpen your leadership mindset</p>
+    <div class="cta-guide-box" id="toolkit">
+      <p class="cta-guide-title">Get The 3-Shift Check-In</p>
+      <p class="cta-guide-sub">A one-page toolkit to spot what's worth doubling down on, what to let go of, and what to build next &mdash; in the AI era.</p>
       <form class="lead-magnet-form" action="https://formspree.io/f/xdalygwy" method="POST">
-        <input type="hidden" name="_subject" value="Newsletter + Leadership Playbook" />
+        <input type="hidden" name="_subject" value="3-Shift Check-In Download" />
+        <input type="hidden" name="_next" value="https://amywucoaching.com/downloads/three-shift-check-in.pdf" />
         <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit" class="btn btn-light">Subscribe</button>
+        <button type="submit" class="btn btn-light">Download</button>
       </form>
     </div>
   </section>
