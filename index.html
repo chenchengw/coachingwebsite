@@ -3,772 +3,237 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amy Wu — Leadership Coaching for Tech Leaders in Transition</title>
-  <meta name="description" content="Leadership coaching for women in tech navigating the transition from expert to organizational leader. Clarity, confidence, and direction grounded in real experience — not empowerment clichés." />
+  <title>Amy Wu — Build a Resilient Career in the AI Era</title>
+  <meta name="description" content="Coaching for tech leaders building careers that hold up when any single path doesn't. Calibration-committee insider, AI advisor + builder, executive coach." />
 
-  <!-- Open Graph / LinkedIn -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Amy Wu — Leadership Coaching for Women in Tech" />
-  <meta property="og:description" content="What got you here won't get you there. I help high-achieving women in tech navigate the transitions that change everything — from IC to executive." />
+  <meta property="og:title" content="Amy Wu — Build a Resilient Career in the AI Era" />
+  <meta property="og:description" content="Coaching for tech leaders building careers that hold up when any single path doesn't." />
   <meta property="og:image" content="https://www.amywucoaching.com/images/og-share.jpg" />
   <meta property="og:url" content="https://www.amywucoaching.com" />
 
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Amy Wu — Leadership Coaching for Women in Tech" />
-  <meta name="twitter:description" content="What got you here won't get you there. I help high-achieving women in tech navigate the transitions that change everything." />
+  <meta name="twitter:title" content="Amy Wu — Build a Resilient Career in the AI Era" />
+  <meta name="twitter:description" content="Coaching for tech leaders building careers that hold up when any single path doesn't." />
   <meta name="twitter:image" content="https://www.amywucoaching.com/images/og-share.jpg" />
+
+  <link rel="alternate" type="application/rss+xml" title="Amy Wu Coaching Newsletter" href="https://newsletter.amywucoaching.com/feed" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%232D2D38'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23967338'>AW</text></svg>" />
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amy Wu",
+    "url": "https://www.amywucoaching.com/",
+    "image": "https://www.amywucoaching.com/images/amy.jpg",
+    "jobTitle": "Executive Coach, AI Advisor, Builder",
+    "description": "Coaching for tech leaders building a resilient career in the AI era. Former Engineering Director at LinkedIn and Instacart.",
+    "alumniOf": [
+      { "@type": "Organization", "name": "LinkedIn" },
+      { "@type": "Organization", "name": "Instacart" },
+      { "@type": "Organization", "name": "Purdue University" }
+    ]
+  }
+  </script>
+
   <style>
-    /* ─── Reset & Base ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --brown:       #967338;
-      --brown-dark:  #7D530C;
-      --charcoal:    #2D2D38;
-      --cream:       #EAF0EB;
-      --gray-light:  #F3F7F4;
-      --gray-mid:    #E3E3E3;
-      --text:        #2d2d2d;
-      --text-light:  #6b6b6b;
-      --white:       #ffffff;
-      --serif:       'Playfair Display', Georgia, serif;
-      --sans:        'Montserrat', Arial, sans-serif;
-      --max-w:       60rem;
-      --section-y:   4.5rem;
+      --brown:#967338; --brown-dark:#7D530C; --charcoal:#2D2D38;
+      --cream:#EAF0EB; --gray-light:#F3F7F4; --gray-mid:#E3E3E3;
+      --text:#2d2d2d; --text-light:#6b6b6b; --white:#fff;
+      --serif:'Playfair Display',Georgia,serif; --sans:'Montserrat',Arial,sans-serif;
+      --max-w:60rem; --section-y:4.5rem;
     }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--sans);
-      font-weight: 300;
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: var(--text);
-      background: var(--white);
-      -webkit-font-smoothing: antialiased;
-    }
-
+    body { font-family: var(--sans); font-weight: 300; font-size: 1.05rem; line-height: 1.75; color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
     img { max-width: 100%; display: block; }
-    a   { color: inherit; text-decoration: none; }
-
-    .container {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* ─── Typography ───────────────────────────────────────────── */
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
     h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.25; }
+    .eyebrow { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brown); margin-bottom: 1rem; }
+    .divider { width: 2.5rem; height: 2px; background: var(--brown); margin: 1.25rem auto 0; }
 
-    .eyebrow {
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--brown);
-      margin-bottom: 1rem;
-    }
-
-    /* ─── Buttons ──────────────────────────────────────────────── */
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 2.2rem;
-      background: var(--brown);
-      color: var(--white);
-      font-family: var(--sans);
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      transition: background 0.25s ease, transform 0.25s ease;
-      cursor: pointer;
-      border: none;
-    }
+    .btn { display: inline-block; padding: 0.85rem 2.2rem; background: var(--brown); color: var(--white); font-family: var(--sans); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; transition: background 0.25s ease, transform 0.25s ease; cursor: pointer; border: none; }
     .btn:hover { background: var(--brown-dark); transform: scale(0.97); }
-
-    .btn-outline {
-      background: transparent;
-      border: 1.5px solid var(--brown);
-      color: var(--brown);
-    }
+    .btn-outline { background: transparent; border: 1.5px solid var(--brown); color: var(--brown); }
     .btn-outline:hover { background: var(--brown); color: var(--white); transform: scale(0.97); }
-
-    .btn-light {
-      background: var(--white);
-      color: var(--charcoal);
-    }
+    .btn-light { background: var(--white); color: var(--charcoal); }
     .btn-light:hover { background: var(--cream); transform: scale(0.97); }
 
-    /* ─── Navigation ───────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
-    }
-    nav.scrolled {
-      background: rgba(255,255,255,0.97);
-      box-shadow: 0 1px 0 var(--gray-mid);
-      padding: 1rem 2rem;
-    }
-
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: 0.02em;
-      transition: color 0.35s ease;
-    }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease; }
+    nav.scrolled { background: rgba(255,255,255,0.97); box-shadow: 0 1px 0 var(--gray-mid); padding: 1rem 2rem; }
+    .nav-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--white); letter-spacing: 0.02em; transition: color 0.35s ease; }
     nav.scrolled .nav-logo { color: var(--charcoal); }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      margin-left: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
-      transition: color 0.25s ease;
-    }
+    .nav-right { display: flex; align-items: center; gap: 2rem; margin-left: auto; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); transition: color 0.25s ease; }
     .nav-links a:hover { color: var(--white); }
     nav.scrolled .nav-links a { color: var(--text-light); }
     nav.scrolled .nav-links a:hover { color: var(--brown); }
-
-    .nav-cta {
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.6);
-      padding: 0.5rem 1.2rem;
-      border-radius: 2px;
-      transition: all 0.25s ease;
-    }
+    .nav-cta { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); border: 1.5px solid rgba(255,255,255,0.6); padding: 0.5rem 1.2rem; border-radius: 2px; transition: all 0.25s ease; }
     .nav-cta:hover { background: rgba(255,255,255,0.15); }
-    nav.scrolled .nav-cta {
-      color: var(--brown);
-      border-color: var(--brown);
-    }
+    nav.scrolled .nav-cta { color: var(--brown); border-color: var(--brown); }
     nav.scrolled .nav-cta:hover { background: var(--brown); color: var(--white); }
-
-    /* ─── Hamburger (mobile) ───────────────────────────────────── */
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .hamburger span {
-      display: block; width: 24px; height: 2px;
-      background: var(--white);
-      transition: all 0.3s ease;
-    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s ease; }
     nav.scrolled .hamburger span { background: var(--charcoal); }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: var(--white);
-      z-index: 99;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--white); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-family: var(--serif);
-      font-size: 1.8rem;
-      color: var(--charcoal);
-    }
+    .mobile-menu a { font-family: var(--serif); font-size: 1.8rem; color: var(--charcoal); }
     .mobile-menu a:hover { color: var(--brown); }
-    .mobile-close {
-      position: absolute;
-      top: 1.5rem; right: 2rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--charcoal);
-    }
+    .mobile-close { position: absolute; top: 1.5rem; right: 2rem; font-size: 1.5rem; cursor: pointer; color: var(--charcoal); }
 
-    /* ─── Hero ─────────────────────────────────────────────────── */
-    #hero {
-      min-height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      background: linear-gradient(135deg, #1a1a2e 0%, #2D2D38 40%, #3d2e1e 100%);
-    }
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(150,115,56,0.08) 0%, transparent 70%);
-    }
+    /* Hero */
+    #hero { min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; background: linear-gradient(135deg, #1a1a2e 0%, #2D2D38 40%, #3d2e1e 100%); }
+    #hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(150,115,56,0.08) 0%, transparent 70%); }
+    .hero-inner { max-width: 48rem; padding: 6rem 2rem 3rem; position: relative; z-index: 1; }
+    #hero h1 { font-size: clamp(2rem, 4.8vw, 3rem); color: var(--white); margin-bottom: 1.5rem; font-weight: 400; letter-spacing: -0.01em; }
+    #hero h1 em { font-style: italic; font-weight: 400; color: var(--brown); }
+    .hero-sub { font-family: var(--sans); font-size: 1.15rem; color: rgba(255,255,255,0.7); max-width: 38rem; margin: 0 auto 2.5rem; line-height: 1.85; font-weight: 300; }
+    .hero-cta-note { font-size: 0.85rem; color: rgba(255,255,255,0.45); margin-top: 0.75rem; letter-spacing: 0.04em; }
 
-    .hero-inner {
-      max-width: 48rem;
-      padding: 4rem 2rem 2.5rem;
-      position: relative;
-      z-index: 1;
-    }
+    /* Bridge */
+    #bridge { background: linear-gradient(135deg, #1a1a2e 0%, #2D2D38 40%, #3d2e1e 100%); padding: 4rem 2rem 5rem; text-align: center; }
+    .bridge-separator { display: block; width: 2rem; height: 2px; background: var(--brown); margin: 0 auto 3rem; opacity: 0.6; }
+    .bridge-signals { max-width: 48rem; margin: 0 auto; display: flex; flex-direction: column; gap: 2.4rem; }
+    .bridge-signals p { font-family: var(--sans); font-size: 1.05rem; color: rgba(255,255,255,0.7); line-height: 1.75; font-weight: 300; letter-spacing: 0.01em; }
 
-    .hero-inner .eyebrow { color: rgba(150, 115, 56, 0.9); }
-
-    #hero h1 {
-      font-size: clamp(2rem, 4.5vw, 3rem);
-      color: var(--white);
-      margin-bottom: 1.5rem;
-      font-weight: 400;
-      letter-spacing: -0.01em;
-    }
-
-    #hero h1 em {
-      font-style: italic;
-      font-weight: 400;
-      color: var(--brown);
-    }
-
-    .hero-sub {
-      font-family: var(--sans);
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.65);
-      max-width: 38rem;
-      margin: 0 auto 2.5rem;
-      line-height: 1.85;
-      font-weight: 300;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-bridge {
-      font-family: var(--sans);
-      font-size: 1rem;
-      color: rgba(255,255,255,0.85);
-      font-weight: 400;
-      margin-bottom: 2rem;
-    }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: rgba(255,255,255,0.4);
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .hero-scroll::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 40px;
-      background: rgba(255,255,255,0.25);
-    }
-
-    .hero-cta-note {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.45);
-      margin-top: 0.75rem;
-      letter-spacing: 0.04em;
-    }
-
-    .hero-secondary-cta {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.7);
-      margin-top: 1rem;
-      letter-spacing: 0.04em;
-    }
-    .hero-secondary-cta a {
-      color: var(--white);
-      border-bottom: 1px solid rgba(255,255,255,0.5);
-      padding-bottom: 1px;
-      transition: border-color 0.2s ease;
-    }
-    .hero-secondary-cta a:hover {
-      border-bottom-color: var(--white);
-    }
-
-    /* ─── Bridge ──────────────────────────────────────────────── */
-    #bridge {
-      background: linear-gradient(135deg, #1a1a2e 0%, #2D2D38 40%, #3d2e1e 100%);
-      padding: 4rem 2rem 5rem;
-      text-align: center;
-    }
-    .bridge-separator {
-      display: block;
-      width: 2rem;
-      height: 2px;
-      background: var(--brown);
-      margin: 0 auto 3rem;
-      opacity: 0.6;
-    }
-    .bridge-signals {
-      max-width: 48rem;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-    }
-    .bridge-signals p {
-      font-family: var(--sans);
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.75;
-      font-style: normal;
-      font-weight: 300;
-      letter-spacing: 0.01em;
-    }
-
-    /* ─── Section Shared ───────────────────────────────────────── */
+    /* Section base */
     section { padding: var(--section-y) 0; }
+    .section-header { text-align: center; max-width: 48rem; margin: 0 auto 3rem; }
+    .section-header h2 { font-size: clamp(1.9rem, 4vw, 2.5rem); color: var(--charcoal); margin-bottom: 1rem; }
+    .section-header h2 em { font-style: italic; color: var(--brown); }
+    .section-header p { color: var(--text-light); font-size: 1.05rem; line-height: 1.8; max-width: 38rem; margin: 1rem auto 0; }
 
-    .section-header {
-      text-align: center;
-      max-width: 48rem;
-      margin: 0 auto 3rem;
+    /* Meet Amy */
+    #meet-amy { background: var(--cream); }
+    .meet-amy-content {
+      display: flex; flex-direction: column; align-items: center;
+      max-width: 42rem; margin: 0 auto;
     }
-    .section-header h2 { font-size: clamp(1.9rem, 4vw, 2.65rem); color: var(--charcoal); margin-bottom: 1rem; }
-    .section-header p  { color: var(--text-light); font-size: 1.05rem; line-height: 1.8; }
+    .amy-photo { margin-bottom: 2.25rem; }
+    .amy-photo img {
+      width: 11rem; height: 11rem; border-radius: 50%;
+      object-fit: cover; border: 3px solid var(--brown);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .amy-bio { width: 100%; }
+    .amy-bio p {
+      color: var(--text); font-size: 1.02rem; line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+    .amy-bio p strong { color: var(--charcoal); font-weight: 600; }
+    .amy-bio p em { color: var(--brown-dark); font-style: italic; }
+    .amy-bio-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.88rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--brown);
+      transition: gap 0.2s ease;
+      margin-top: 0.5rem;
+    }
+    .amy-bio-link:hover { gap: 0.7rem; }
+    .amy-bio-link::after { content: '→'; }
 
-    /* ─── Who This Is For ──────────────────────────────────────── */
-    #services { background: var(--white); }
-
-    .for-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+    /* Why work with Amy */
+    #why-amy { background: var(--white); }
+    .why-grid {
+      max-width: 44rem; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .why-item {
+      background: var(--white); padding: 1.4rem 1.65rem;
+      border-radius: 4px; border-left: 3px solid var(--brown);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .why-item h3 {
+      font-family: var(--serif); font-size: 1.15rem; font-weight: 600;
+      color: var(--charcoal); margin-bottom: 0.5rem;
+    }
+    .why-item p {
+      font-size: 0.97rem; color: var(--text-light); line-height: 1.75;
     }
 
-    .for-card {
-      background: var(--white);
-      border-radius: 4px;
-      padding: 2.5rem 2rem;
+    /* Offerings preview (brief teaser) */
+    #services-preview { background: var(--cream); }
+    .offerings-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+      max-width: 56rem; margin: 0 auto;
+    }
+    .offering-card {
+      background: var(--white); border-radius: 4px;
       border-top: 3px solid var(--brown);
+      border: 1px solid var(--gray-mid); border-top: 3px solid var(--brown);
+      padding: 1.65rem 1.5rem 1.5rem;
+      text-align: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .for-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .for-card h3 {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--charcoal);
-    }
-    .services-intro {
-      text-align: center;
-      font-size: 0.95rem;
-      color: var(--text-light);
-      margin: -0.5rem auto 2.5rem;
-      font-style: italic;
-    }
-
-    .service-type {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--brown);
-      margin-bottom: 0.6rem;
-    }
-    .service-tagline {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      font-style: italic;
-      margin-bottom: 1.25rem;
-      line-height: 1.6;
-    }
-    .service-work {
-      font-size: 0.9rem;
-      color: var(--text);
-      line-height: 1.7;
-      padding-top: 1rem;
-      margin-top: 1rem;
-      border-top: 1px solid var(--gray-mid);
-    }
-    .service-work strong {
-      color: var(--brown-dark);
-      font-weight: 600;
-    }
-
-    .service-note {
-      font-size: 0.9rem;
-      color: var(--brown-dark);
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-      line-height: 1.6;
-    }
-    .for-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .for-card li {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      line-height: 1.6;
-      padding: 0.35rem 0 0.35rem 1.2rem;
-      position: relative;
-    }
-    .for-card li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--brown);
-    }
-
-    /* ─── Nav logo text ────────────────────────────────────────── */
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: clamp(0.95rem, 3vw, 1.25rem);
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 0.01em;
-      transition: color 0.35s ease;
-    }
-    nav.scrolled .nav-logo { color: var(--charcoal); }
-
-    /* ─── About ────────────────────────────────────────────────── */
-    #about { background: var(--cream); }
-
-    .about-centered {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 48rem;
-      margin: 0 auto;
-    }
-
-    .about-photo-round {
-      width: 12rem;
-      height: 12rem;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 1.5rem auto 2rem;
-      border: 3px solid var(--brown);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      flex-shrink: 0;
-    }
-    .about-photo-round img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .about-photo-round.placeholder {
-      background: linear-gradient(135deg, #c4a97d 0%, #967338 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .about-text {
-      text-align: center;
-    }
-    .about-text h2 {
-      font-size: clamp(1.9rem, 3.5vw, 2.4rem);
-      margin-bottom: 1.5rem;
-      color: var(--charcoal);
-    }
-    .about-text p {
-      color: var(--text-light);
-      margin-bottom: 1.25rem;
-      font-size: 1.05rem;
-      line-height: 1.85;
-      text-align: left;
-    }
-
-    .about-credentials {
-      list-style: none;
-      margin: 2rem 0 2.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .about-credentials li {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .about-credentials li::before {
-      content: '';
-      width: 18px;
-      height: 1px;
-      background: var(--brown);
-      flex-shrink: 0;
-    }
-
-    .about-transitions {
-      list-style: none;
-      margin: 0.5rem 0 1.25rem;
-      padding: 0;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .about-transitions li {
-      font-size: 0.98rem;
-      color: var(--text-light);
-      line-height: 1.65;
-      padding-left: 1.25rem;
-      position: relative;
-    }
-    .about-transitions li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.55rem;
-      width: 6px;
-      height: 6px;
-      background: var(--brown);
-      border-radius: 50%;
-    }
-    .about-transitions li strong {
-      color: var(--charcoal);
-      font-weight: 600;
-    }
-
-    .about-approach {
-      list-style: none;
-      margin: 0.5rem 0 1.25rem;
-      padding: 0;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .about-approach li {
-      font-size: 0.98rem;
-      color: var(--text-light);
-      line-height: 1.65;
-      padding-left: 1.25rem;
-      position: relative;
-    }
-    .about-approach li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.55rem;
-      width: 6px;
-      height: 6px;
-      background: var(--brown);
-      border-radius: 50%;
-    }
-
-    /* ─── About credential badge strip ─────────────────────────── */
-    .about-badge-strip {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin: 1.75rem 0 2rem;
-      padding: 0;
-      background: transparent;
-      border: none;
-    }
-    .about-logos-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--charcoal);
-      opacity: 0.5;
-      margin: 0;
-    }
-    .about-company-logos {
-      display: flex;
-      align-items: center;
-      gap: 1.75rem;
-      flex-wrap: wrap;
-    }
-    .about-company-logos img {
-      height: 56px;   /* Instacart — middle */
-      width: auto;
-      flex-shrink: 0;
-      opacity: 0.9;
-    }
-    .about-company-logos img[alt="LinkedIn"]          { height: 68px; }
-    .about-company-logos img[alt="Purdue University"] { height: 32px; }
-    .about-cred-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-    .cred-tag {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--charcoal);
-      background: var(--cream);
+    .offering-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .offering-dur {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--brown);
       border: 1px solid rgba(150,115,56,0.3);
-      padding: 0.35rem 0.8rem;
-      border-radius: 2px;
-      letter-spacing: 0.02em;
-      transition: background 0.2s ease, border-color 0.2s ease;
+      padding: 0.2rem 0.55rem; border-radius: 2px; margin-bottom: 1rem;
     }
-    a.cred-tag:hover {
-      background: rgba(150,115,56,0.15);
-      border-color: var(--brown);
+    .offering-card h3 {
+      font-family: var(--serif); font-size: 1.2rem; font-weight: 600;
+      color: var(--charcoal); margin-bottom: 0.6rem; line-height: 1.3;
     }
+    .offering-card p {
+      font-family: var(--serif); font-style: italic;
+      font-size: 0.97rem; color: var(--text-light); line-height: 1.55;
+    }
+    .services-cta { text-align: center; margin-top: 2.5rem; }
+    @media (max-width: 720px) { .offerings-grid { grid-template-columns: 1fr; } }
 
-    /* ─── Testimonials ─────────────────────────────────────────── */
+    /* Testimonials — CAROUSEL */
     #testimonials { background: var(--gray-light); }
-
-    #testimonials .section-header h2 { color: var(--charcoal); }
-    #testimonials .section-header p  { color: var(--text-light); }
-    #testimonials .eyebrow           { color: rgba(150,115,56,0.8); }
-
-    .testimonial-carousel {
-      max-width: 760px;
-      margin: 0 auto;
-      position: relative;
-      min-height: 260px;
-    }
-
-    .testimonial-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.7s ease-in-out;
-    }
-    .testimonial-slide.active {
-      position: relative;
-      opacity: 1;
-      pointer-events: auto;
-    }
-
+    #testimonials .eyebrow { color: rgba(150,115,56,0.85); }
+    .testimonial-carousel { max-width: 760px; margin: 0 auto; position: relative; min-height: 260px; }
+    .testimonial-slide { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; pointer-events: none; transition: opacity 0.7s ease-in-out; }
+    .testimonial-slide.active { position: relative; opacity: 1; pointer-events: auto; }
     .testimonial-slide blockquote {
-      padding-left: 2rem;
-      border-left: 3px solid var(--brown);
-      margin: 0;
+      padding-left: 2rem; border-left: 3px solid var(--brown); margin: 0;
     }
-
     .testimonial-slide .t-open-quote {
-      font-family: var(--serif);
-      font-size: 4rem;
-      line-height: 0.5;
-      color: var(--brown);
-      opacity: 0.2;
-      margin-bottom: 0.75rem;
-      margin-left: -0.25rem;
-      pointer-events: none;
-      user-select: none;
+      font-family: var(--serif); font-size: 4rem; line-height: 0.5;
+      color: var(--brown); opacity: 0.2;
+      margin-bottom: 0.75rem; margin-left: -0.25rem;
+      pointer-events: none; user-select: none;
     }
-
     .testimonial-slide blockquote p {
-      font-family: var(--serif);
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: var(--charcoal);
+      font-family: var(--serif); font-size: 1.15rem; line-height: 1.7; color: var(--charcoal);
     }
-
     .testimonial-slide cite {
-      display: block;
-      font-style: normal;
-      margin-top: 1.75rem;
-      padding-top: 1.25rem;
+      display: block; font-style: normal;
+      margin-top: 1.75rem; padding-top: 1.25rem;
       border-top: 1px solid rgba(0,0,0,0.08);
       margin-left: 2rem;
     }
-    .testimonial-slide .t-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--charcoal);
-    }
-    .testimonial-slide .t-title {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      margin-top: 0.2rem;
-      font-weight: 500;
-    }
-
-    .t-nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
+    .testimonial-slide .t-name { font-size: 1rem; font-weight: 700; color: var(--charcoal); }
+    .testimonial-slide .t-title { font-size: 0.9rem; color: var(--text-light); margin-top: 0.2rem; font-weight: 500; }
+    .t-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
     .t-nav-arrow {
-      padding: 0.5rem;
-      border-radius: 50%;
-      border: none;
-      background: transparent;
-      color: var(--brown);
-      cursor: pointer;
-      transition: background 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 0.5rem; border-radius: 50%; border: none;
+      background: transparent; color: var(--brown);
+      cursor: pointer; transition: background 0.2s;
+      display: flex; align-items: center; justify-content: center;
     }
-    .t-nav-arrow:hover {
-      background: rgba(150,115,56,0.1);
-    }
-    .t-nav-arrow svg {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-
-    .t-dots {
-      display: flex;
-      gap: 0.6rem;
-    }
+    .t-nav-arrow:hover { background: rgba(150,115,56,0.1); }
+    .t-nav-arrow svg { width: 1.25rem; height: 1.25rem; }
+    .t-dots { display: flex; gap: 0.6rem; }
     .t-dot {
-      height: 0.5rem;
-      width: 0.5rem;
-      border-radius: 9999px;
-      border: none;
-      background: rgba(150,115,56,0.25);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      padding: 0;
+      height: 0.5rem; width: 0.5rem; border-radius: 9999px;
+      border: none; background: rgba(150,115,56,0.25);
+      cursor: pointer; transition: all 0.3s ease; padding: 0;
     }
-    .t-dot:hover {
-      background: rgba(150,115,56,0.45);
-    }
-    .t-dot.active {
-      width: 2rem;
-      background: var(--brown);
-    }
-
+    .t-dot:hover { background: rgba(150,115,56,0.45); }
+    .t-dot.active { width: 2rem; background: var(--brown); }
     @media (max-width: 600px) {
       .t-nav-arrow { display: none; }
       .testimonial-slide blockquote { padding-left: 1.25rem; }
@@ -776,594 +241,142 @@
       .testimonial-slide blockquote p { font-size: 1.05rem; }
     }
 
-    /* ─── Articles ─────────────────────────────────────────────── */
-    #articles { background: var(--white); }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-    }
-
-    .article-card {
-      background: var(--gray-light);
-      border-radius: 4px;
-      border-top: 3px solid var(--brown);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: box-shadow 0.25s ease, transform 0.25s ease;
-    }
-    .article-card:hover {
-      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-      transform: translateY(-3px);
-    }
-
-    .article-tag-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .article-tag {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--brown);
-      border: 1px solid rgba(150,115,56,0.3);
-      padding: 0.25rem 0.6rem;
-      border-radius: 2px;
-    }
-
-    .article-meta {
-      font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-light);
-    }
-
-    .article-insight {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 0.95rem;
-      color: var(--text-light);
-      background: rgba(150,115,56,0.06);
-      border-left: 3px solid var(--brown);
-      padding: 0.65rem 0.9rem;
-      margin-top: 1rem;
-      line-height: 1.6;
-    }
-
-    .article-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
-
-    .article-body h3 {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--charcoal);
-      margin-bottom: 0.75rem;
-      line-height: 1.4;
-    }
-
-    .article-body p {
-      font-size: 0.98rem;
-      color: var(--text-light);
-      line-height: 1.8;
-      flex: 1;
-    }
-
-    .article-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--brown);
-      margin-top: 1.5rem;
-      transition: gap 0.2s ease;
-    }
-    .article-link:hover { gap: 0.7rem; }
-    .article-link::after { content: '→'; }
-
-    /* footer badge/linkedin rules are in the Footer section below */
-
-    /* ─── Newsletter Button (nav) ──────────────────────────────── */
-    .nav-newsletter {
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      font-family: var(--sans);
-      transition: color 0.25s ease;
-    }
-    .nav-newsletter:hover { color: var(--white); }
-    nav.scrolled .nav-newsletter { color: var(--text-light); }
-    nav.scrolled .nav-newsletter:hover { color: var(--brown); }
-
-    /* ─── Newsletter Button (mobile menu) ──────────────────────── */
-    .mobile-newsletter {
-      font-family: var(--serif);
-      font-size: 1.8rem;
-      color: var(--charcoal);
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
-    .mobile-newsletter:hover { color: var(--brown); }
-
-    /* ─── Newsletter Modal ──────────────────────────────────────── */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-    .modal-overlay.open { display: flex; }
-
-    .modal-box {
-      background: var(--white);
-      border-radius: 6px;
-      padding: 2.5rem 2.5rem 2rem;
-      max-width: 480px;
-      width: 100%;
-      position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 1rem;
-      right: 1.25rem;
-      font-size: 1.1rem;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      color: var(--text-light);
-      line-height: 1;
-      transition: color 0.2s ease;
-    }
-    .modal-close:hover { color: var(--charcoal); }
-
-    /* ─── Contact Form ──────────────────────────────────────────── */
-    .contact-form { display: flex; flex-direction: column; gap: 0.85rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
-    @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.7rem 0.9rem;
-      border: 1px solid var(--gray-mid);
-      border-radius: 3px;
-      font-family: var(--sans);
-      font-size: 0.9rem;
-      color: var(--text);
-      background: var(--white);
-      transition: border-color 0.2s ease;
-    }
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus { outline: none; border-color: var(--brown); }
-    .contact-form textarea { resize: vertical; }
-
-    /* ─── Final CTA ────────────────────────────────────────────── */
-    #cta {
-      background: var(--charcoal);
-      text-align: center;
-      padding: 4.5rem 2rem;
-    }
-
+    /* Final CTA */
+    #cta { background: var(--charcoal); text-align: center; padding: 4.5rem 2rem; }
     #cta .eyebrow { color: var(--brown); }
-    #cta h2 {
-      font-size: clamp(1.4rem, 3vw, 1.8rem);
-      color: var(--white);
-      max-width: 38rem;
-      margin: 0 auto 1.5rem;
-    }
-    #cta p {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.65);
-      max-width: 38rem;
-      margin: 0 auto 1.5rem;
-      line-height: 1.8;
-    }
-    .cta-timeline {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      max-width: 42rem;
-      margin: 2.5rem auto 3rem;
-    }
-    .cta-timeline-step {
-      text-align: center;
-    }
-    .cta-step-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 2rem;
-      height: 2rem;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50%;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      color: var(--brown);
-      margin-bottom: 0.75rem;
-    }
-    .cta-timeline-step h4 {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      color: var(--white);
-      font-weight: 400;
-      margin-bottom: 0.4rem;
-    }
-    .cta-timeline-step p {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.45);
-      line-height: 1.6;
-      margin: 0;
-    }
-    @media (max-width: 600px) {
-      .cta-timeline {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        max-width: 20rem;
-      }
-    }
-    .cta-note {
-      margin-top: 1.25rem;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.35);
-      letter-spacing: 0.04em;
-    }
-    .cta-or {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.3);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin: 1rem 0 0.5rem;
-    }
-    .cta-email {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.03em;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: color 0.2s ease;
-    }
-    .cta-email:hover { color: var(--white); }
-    #cta .btn-light {
-      padding: 0.8rem 2rem;
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      box-shadow: 0 0 0 4px rgba(255,255,255,0.15);
-    }
-    #cta .btn-light:hover {
-      box-shadow: 0 0 0 6px rgba(255,255,255,0.2);
-      transform: scale(0.98);
-    }
-    .cta-guide-box {
-      max-width: 24rem;
-      margin: 1.5rem auto 0;
-      border: none;
-      border-radius: 0;
-      padding: 1.25rem 0 0;
-      text-align: center;
-    }
-    .cta-guide-title {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.5;
-      margin: 0 0 0.35rem;
-    }
-    .cta-guide-sub {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.4);
-      margin: 0 0 1rem;
-    }
-    .cta-guide-box .lead-magnet-form {
-      display: flex;
-      gap: 0.5rem;
-      justify-content: center;
-    }
-    .cta-guide-box .lead-magnet-form input[type="email"] {
-      flex: 1;
-      max-width: 14rem;
-      padding: 0.6rem 0.85rem;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 4px;
-      background: transparent;
-      color: var(--white);
-      outline: none;
-    }
-    .cta-guide-box .lead-magnet-form input[type="email"]::placeholder {
-      color: rgba(255,255,255,0.35);
-    }
-    .cta-guide-box .lead-magnet-form input[type="email"]:focus {
-      border-color: var(--brown);
-    }
-    .cta-guide-box .lead-magnet-form .btn-light {
-      padding: 0.5rem 0.85rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      box-shadow: none;
-    }
-    @media (max-width: 480px) {
-      .cta-guide-box .lead-magnet-form {
-        flex-direction: column;
-      }
-      .cta-guide-box .lead-magnet-form input[type="email"] {
-        max-width: 100%;
-      }
-    }
+    #cta h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); color: var(--white); max-width: 38rem; margin: 0 auto 1.5rem; font-weight: 400; }
+    #cta h2 em { font-style: italic; color: var(--brown); font-weight: 400; }
+    #cta > p { font-size: 1rem; color: rgba(255,255,255,0.65); max-width: 38rem; margin: 0 auto 1.5rem; line-height: 1.8; }
+    .cta-timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 42rem; margin: 2.5rem auto 3rem; }
+    .cta-timeline-step { text-align: center; }
+    .cta-step-num { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; font-size: 0.8rem; color: var(--brown); margin-bottom: 0.75rem; }
+    .cta-timeline-step h4 { font-family: var(--serif); font-size: 1.05rem; color: var(--white); font-weight: 400; margin-bottom: 0.4rem; }
+    .cta-timeline-step p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin: 0; }
+    @media (max-width: 600px) { .cta-timeline { grid-template-columns: 1fr; gap: 1.5rem; max-width: 20rem; } }
+    #cta .btn-light { padding: 0.8rem 2rem; font-size: 0.85rem; letter-spacing: 0.1em; box-shadow: 0 0 0 4px rgba(255,255,255,0.15); }
+    #cta .btn-light:hover { box-shadow: 0 0 0 6px rgba(255,255,255,0.2); transform: scale(0.98); }
 
-    /* ─── Mobile sticky CTA ─────────────────────────────────────── */
-    .mobile-cta-bar {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      z-index: 90;
-      background: var(--brown);
-      text-align: center;
-      padding: 0.9rem 1rem;
-      box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
-    }
-    .mobile-cta-bar a {
-      color: var(--white);
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    /* ─── Footer ───────────────────────────────────────────────── */
-    footer {
-      background: #16161e;
-      padding: 2.5rem 2rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      text-align: center;
-    }
-
-    .footer-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
+    /* Footer */
+    footer { background: #16161e; padding: 2.5rem 2rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-row { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
     .footer-badge-link img { height: 48px; width: auto; opacity: 0.7; transition: opacity 0.2s ease; }
     .footer-badge-link:hover img { opacity: 1; }
-
-    .footer-social {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      transition: color 0.2s ease;
-    }
+    .footer-social { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); transition: color 0.2s ease; }
     .footer-social:hover { color: var(--brown); }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); letter-spacing: 0.05em; }
 
-    .footer-copy {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.25);
-      letter-spacing: 0.05em;
-    }
+    .fade-in { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-    /* ─── Divider ──────────────────────────────────────────────── */
-    .divider {
-      width: 2.5rem;
-      height: 2px;
-      background: var(--brown);
-      margin: 1.25rem auto 0;
-    }
-
-    /* ─── Fade-in animations ───────────────────────────────────── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ─── Responsive ───────────────────────────────────────────── */
     @media (max-width: 900px) {
-      .for-grid,
-      .articles-grid {
-        grid-template-columns: 1fr;
-      }
-      .about-badge-strip { align-items: flex-start; }
       .nav-right { display: none; }
       .hamburger { display: flex; }
-      .footer-badge { flex-direction: column; }
     }
-
-    @media (max-width: 900px) {
-      .mobile-cta-bar { display: block; }
-      body { padding-bottom: 3.5rem; }
-    }
-
     @media (max-width: 600px) {
       :root { --section-y: 3rem; }
       #hero h1 { font-size: 1.8rem; }
       .hero-inner { padding: 6rem 1.25rem 3rem; }
-      .hero-narrative { padding: 0 0.5rem; }
-      .about-photo-round { width: 10rem; height: 10rem; }
-    }
-
-    @media (max-width: 480px) {
-.article-track .article-card { width: 290px; }
+      .container { padding: 0 1.25rem; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ─── Navigation ─── -->
   <nav id="nav">
-    <a class="nav-logo" href="#hero">Amy Wu Coaching</a>
+    <a class="nav-logo" href="./">Amy Wu Coaching</a>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="services/">Services</a></li>
+        <li><a href="about/">About</a></li>
         <li><a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener">Newsletter</a></li>
       </ul>
-      <button class="nav-newsletter" onclick="openContact()">Contact</button>
       <a class="nav-cta" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Free Clarity Call</a>
     </div>
-    <div class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
   </nav>
 
-  <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-close" id="mobileClose">✕</div>
-    <a href="#services"  onclick="closeMobile()">Services</a>
-    <a href="#about"     onclick="closeMobile()">About</a>
-    <a href="#toolkit"   onclick="closeMobile()">Toolkit</a>
+    <a href="services/"   onclick="closeMobile()">Services</a>
+    <a href="about/"      onclick="closeMobile()">About</a>
     <a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener" onclick="closeMobile()">Newsletter</a>
-    <button class="mobile-newsletter" onclick="closeMobile(); openNewsletter();">Subscribe</button>
-    <button class="mobile-newsletter" onclick="closeMobile(); openContact();">Contact</button>
     <a href="https://calendly.com/chenchengwu88/30min" target="_blank" class="btn" style="font-size:0.8rem;" onclick="closeMobile()">Book a Clarity Call →</a>
   </div>
 
-  <!-- ─── Hero ─── -->
   <section id="hero">
     <div class="hero-inner fade-in visible">
-      <h1>I Help High Achievers Build the <em>Strength to Meet Their Inflection Point</em></h1>
-      <p class="hero-sub">What's keeping you up is whether the path you've spent a decade on still leads where you thought.</p>
-      <p class="hero-sub" style="margin-top:0.5rem;">I help you see what you're already great at, what's worth doubling down on, and what to let go of &mdash; so you move forward from strength, with the confidence to navigate the AI era.</p>
+      <h1>Build a <em>resilient career</em> in the AI era.</h1>
+      <p class="hero-sub">Coaching for tech leaders building careers that hold up when any single path doesn't.</p>
       <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
       <p class="hero-cta-note">I take on a small number of new clients each quarter &mdash; let's have a free strategy session to decide the fit.</p>
-      <p class="hero-secondary-cta">Not ready for a session? <a href="#toolkit">Get the free 3-Shift Check-In &rarr;</a></p>
     </div>
   </section>
 
-  <!-- ─── Bridge ─── -->
   <section id="bridge">
     <span class="bridge-separator"></span>
     <div class="bridge-signals">
       <p class="fade-in">You feel something is off &mdash; but you don't know if it's you, your org, or your industry.</p>
-      <p class="fade-in">You're doing everything right &mdash; and the recognition keeps coming up short.</p>
-      <p class="fade-in">You're still doing what got you here &mdash; shipping more, sharper alignment, deeper specialty &mdash; and starting to wonder which still belongs.</p>
-      <p class="fade-in">You're the one everyone brings their hard problems to &mdash; and there's no one left to bring you yours.</p>
+      <p class="fade-in">You're chasing new AI tools every month &mdash; and still feeling behind.</p>
+      <p class="fade-in">The four paths you were trained to choose &mdash; founder, startup founding member, corporate ladder, advisory &mdash; are all getting harder.</p>
+      <p class="fade-in">And what you actually need isn't another path &mdash; it's resilience across all of them.</p>
     </div>
   </section>
 
-  <!-- ─── Services ─── -->
-  <section id="services">
+  <!-- ─── Meet Amy ─── -->
+  <section id="meet-amy">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="eyebrow">Services</p>
-        <h2>How I work with clients</h2>
+        <p class="eyebrow">Meet Amy</p>
+        <h2>I've been <em>where you are</em>.</h2>
         <div class="divider"></div>
       </div>
-      <p class="services-intro">All sessions are 1:1. I start with a free strategy session so you can decide if the fit and chemistry feel right.</p>
-      <div class="for-grid">
-        <div class="for-card fade-in">
-          <h3>Something Has to Change</h3>
-          <p class="service-tagline">The path didn't change. You did. The role you fought for, the next promotion you were lining up &mdash; they still look right from outside. From inside, something's gone quiet. You can't tell yet if it's the role, the chapter, or the way you've been measuring &ldquo;right.&rdquo;</p>
-          <p class="service-work"><strong>What you walk away with:</strong> A path you actually want to take &mdash; and the conviction to take it.</p>
+      <div class="meet-amy-content fade-in">
+        <div class="amy-photo">
+          <img src="images/amy.jpg" alt="Amy Wu" />
         </div>
-        <div class="for-card fade-in">
-          <h3>The Rules Keep Changing</h3>
-          <p class="service-tagline">You're doing everything right. You're outperforming. You're delivering. And the outcome still doesn't match the effort &mdash; the feedback comes back vague, the criteria keeps shifting, and what's actually being measured is never quite said out loud.</p>
-          <p class="service-work"><strong>What you walk away with:</strong> The recognition you deserved &mdash; and a durable read on what's actually being measured.</p>
-        </div>
-        <div class="for-card fade-in">
-          <h3>The Room Got Quieter</h3>
-          <p class="service-tagline">Your investors need your conviction. Your team needs your direction. Your clients need your steady hand. Your family needs you to be the rock at home. And you can be yourself in front of fewer and fewer people.</p>
-          <p class="service-work"><strong>What you walk away with:</strong> A trusted thinking partner where you don't have to be the strong one &mdash; and the strategic muscle to make sharper calls in the rooms where you do.</p>
+        <div class="amy-bio">
+          <p>I'm an <strong>executive coach, AI advisor, and builder</strong> who helps tech leaders design resilient careers in the AI era.</p>
+
+          <p>I spent over a decade leading engineering at LinkedIn and Instacart &mdash; IC to Engineering Director, five promotions within 10 years, and sitting in calibration rooms deciding senior-level promotions. That work taught me what those rooms actually weigh &mdash; <em>and what they don't, even when candidates think they do.</em></p>
+
+          <p>Today I'm building a portfolio life &mdash; designed for resilience, AI-native by intent. I work 1:1 with tech leaders at inflection points, run fractional AI advisory and implementation for early-stage AI startups, write at newsletter.amywucoaching.com, and am building a community of tech leaders designing the same shape. <strong>Building is my passion project</strong> &mdash; what I do for joy. The operator credibility it gives me is what makes my coaching on the AI-native shift durable, not theoretical.</p>
+
+          <p>My engagements focus on three kinds of inflection points: getting promoted on your terms, navigating crossroads moments, and designing portfolio lives. I combine calibration-room directness with deep listening &mdash; creating space for clients to see what they've been avoiding, while building the courage to act on it.</p>
+
+          <a class="amy-bio-link" href="about/">Read the full story</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── About ─── -->
-  <section id="about">
+  <!-- ─── Why Work With Amy ─── -->
+  <section id="why-amy">
     <div class="container">
-      <div class="about-centered">
-        <div class="about-text fade-in">
-          <h2>I've been where you are.</h2>
-          <div class="about-photo-round">
-            <img
-              src="images/amy.jpg"
-              alt="Amy Wu"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');"
-            />
-          </div>
-          <p>
-            Drawing from 10+ years at LinkedIn and Instacart &mdash; where I grew from IC to Engineering Director leading 50+ engineers &mdash; I bring an insider understanding of how performance, promotion, and influence actually work inside tech organizations. Each transition required becoming a different kind of leader:
-          </p>
-          <ul class="about-transitions">
-            <li><strong>IC to Tech Lead</strong> — it stopped being about my code</li>
-            <li><strong>Tech Lead to Manager</strong> — the scoreboard changed and nobody told me</li>
-            <li><strong>Manager to Senior Manager</strong> — my job became replacing myself</li>
-            <li><strong>Senior Manager to Director</strong> — politics weren't optional anymore</li>
-            <li><strong>Director to Builder</strong> — I walked away from the title and started rebuilding myself again</li>
-          </ul>
-          <p>
-            I navigated all of them as often the only Asian and woman in the room &mdash; which meant less room to figure it out in public.
-          </p>
-          <p>
-            What carried me through each rewrite was the same pattern: <strong>seeing what I was already great at, doubling down on what was worth building, and letting go of what no longer fit.</strong> I help clients do the same &mdash; clarifying what's really being asked, surfacing what's hiding in plain sight, and moving forward from strength, not catch-up. That's the shape of the work.
-          </p>
-          <div class="about-badge-strip">
-            <p class="about-logos-label">Formerly at</p>
-            <div class="about-company-logos">
-              <img src="images/linkedin.png" alt="LinkedIn" />
-              <img src="images/instacart.png" alt="Instacart" />
-              <img src="images/purdue.png" alt="Purdue University" />
-              <a href="https://www.credly.com/badges/77ad2fd2-978f-497a-91d1-247b42c8bcc8/public_url" target="_blank" rel="noopener">
-                <img src="images/nlp-practitioner.png" alt="iNLP Practitioner" />
-              </a>
-            </div>
-            <div class="about-cred-tags">
-              <span class="cred-tag">Engineering Director, Instacart</span>
-              <span class="cred-tag">Engineering Lead, LinkedIn</span>
-              <span class="cred-tag">Promoted 5x in 10 years</span>
-              <a class="cred-tag" href="https://www.credly.com/badges/77ad2fd2-978f-497a-91d1-247b42c8bcc8/public_url" target="_blank" rel="noopener">iNLP Practitioner</a>
-              <span class="cred-tag">Mentored and coached dozens of women in tech</span>
-            </div>
-          </div>
+      <div class="section-header fade-in">
+        <p class="eyebrow">Why work with Amy</p>
+        <h2>Operator credibility, <em>calibration-room perspective</em></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item fade-in">
+          <h3>Calibration-committee insider</h3>
+          <p>10+ years at LinkedIn and Instacart, sat in calibration rooms deciding senior promotions. I know what those rooms actually weigh &mdash; and what they don't, even when candidates think they do.</p>
+        </div>
+        <div class="why-item fade-in">
+          <h3>Senior-level placement track record</h3>
+          <p>Clients have landed senior-manager and director-level roles after working together. Interview prep here is leadership narrative work, not ATS hacking.</p>
+        </div>
+        <div class="why-item fade-in">
+          <h3>Active AI-operator credibility</h3>
+          <p>Fractional AI advisory and implementation for early-stage startups. I'm not just writing about the AI-native shift; I'm operating inside it.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── Testimonials ─── -->
+  <!-- ─── Testimonials (carousel) ─── -->
   <section id="testimonials">
     <div class="container">
       <div class="section-header fade-in">
@@ -1374,7 +387,7 @@
         <div class="testimonial-slide active">
           <blockquote>
             <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
-            <p>Working with Amy has been transformative for both my career and my life. She supported me through major transitions &mdash; from IC to Tech Lead Manager to Senior Engineering Manager &mdash; helping me grow into a more confident, grounded, and effective leader. Her coaching helped me navigate new roles, build credibility with teams, and make clearer, more intentional decisions. Her questions had a way of pulling me up out of the day-to-day and surfacing the patterns, incentives, and second-order effects I hadn't been seeing &mdash; which is how I built a system thinker's mindset for managing teams and a leadership style grounded in who I actually was rather than borrowed from someone else's playbook.</p>
+            <p>Working with Amy has been transformative for both my career and my life. She supported me through major transitions &mdash; from IC to Tech Lead Manager to Senior Engineering Manager &mdash; helping me grow into a more confident, grounded, and effective leader. Her questions had a way of pulling me up out of the day-to-day and surfacing the patterns and second-order effects I hadn't been seeing &mdash; which is how I built a system thinker's mindset for managing teams and a leadership style grounded in who I actually was rather than borrowed from someone else's playbook.</p>
           </blockquote>
           <cite>
             <span class="t-name">Christina Xu</span>
@@ -1385,7 +398,7 @@
         <div class="testimonial-slide">
           <blockquote>
             <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
-            <p>What sets Amy apart is how tailored her coaching is &mdash; she doesn't offer generic advice, but highly relevant, context-rich guidance specific to my situation. Whether I was navigating performance calibration, difficult stakeholder dynamics, or complex managerial decisions, Amy helped me move through them effectively. Her questions helped me see what leadership actually looks like at my next level &mdash; on both the IC track and the management track &mdash; and surfaced what I was genuinely looking for instead of just chasing a title. That clarity reshaped how I evaluated opportunities &mdash; I started pursuing roles that fit what I actually wanted, not just the next legible step. She offers thoughtful, experience-based guidance that is both strategic and deeply supportive.</p>
+            <p>What sets Amy apart is how tailored her coaching is &mdash; she doesn't offer generic advice, but highly relevant, context-rich guidance specific to my situation. Her questions helped me see what leadership actually looks like at my next level on both the IC and management tracks &mdash; and surfaced what I was genuinely looking for instead of just chasing a title. That clarity reshaped how I evaluated opportunities &mdash; I started pursuing roles that fit what I actually wanted, not just the next legible step.</p>
           </blockquote>
           <cite>
             <span class="t-name">Chang Xu</span>
@@ -1396,7 +409,7 @@
         <div class="testimonial-slide">
           <blockquote>
             <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
-            <p>Amy helped me build the skills to turn opportunities into real business impact &mdash; things like influencing without authority, earning cross-functional buy-in, and staying calm and patient through ambiguity. I used to struggle to get alignment from product partners and secure resources for foundational, long-term investments. Amy didn't hand me answers &mdash; she asked the questions that helped me understand why my proposals weren't landing the way I expected, and how to navigate complex organizational dynamics more strategically: when to invest in alignment, when to move forward with what I had, and how to build influence over time. The muscles Amy helped me build played a key role in my promotion to Staff Engineer and continue to shape how I show up today.</p>
+            <p>Amy helped me build the skills to turn opportunities into real business impact &mdash; influencing without authority, earning cross-functional buy-in, and staying calm and patient through ambiguity. Amy didn't hand me answers &mdash; she asked the questions that helped me understand why my proposals weren't landing the way I expected, and how to navigate complex organizational dynamics more strategically. The muscles Amy helped me build played a key role in my promotion to Staff Engineer and continue to shape how I show up today.</p>
           </blockquote>
           <cite>
             <span class="t-name">Arthur Li</span>
@@ -1443,7 +456,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
         </button>
         <div class="t-dots" id="tDots">
-          <button class="t-dot active" aria-label="Go to testimonial 1" aria-current="true"></button>
+          <button class="t-dot active" aria-label="Go to testimonial 1"></button>
           <button class="t-dot" aria-label="Go to testimonial 2"></button>
           <button class="t-dot" aria-label="Go to testimonial 3"></button>
           <button class="t-dot" aria-label="Go to testimonial 4"></button>
@@ -1457,61 +470,10 @@
     </div>
   </section>
 
-  <!-- ─── Articles ─── -->
-  <section id="articles">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="eyebrow">From the Newsletter</p>
-        <h2>Recent Posts</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="articles-grid">
-        <div class="article-card">
-          <div class="article-body">
-            <div class="article-tag-row">
-              <span class="article-tag">Career</span>
-              <span class="article-meta">4 min read</span>
-            </div>
-            <h3>Why I Walked Away from My Director Role</h3>
-            <p>I was at the peak of my career — and I wasn't happier. Despite the title and the trajectory, I'd lost control of my time and sight of what made me feel fulfilled.</p>
-            <div class="article-insight">"It's been a long time since I saw you work so hard, but so happy at the same time."</div>
-            <a class="article-link" href="https://newsletter.amywucoaching.com/p/why-i-walked-away-from-my-director" target="_blank" rel="noopener">Read the article</a>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="article-body">
-            <div class="article-tag-row">
-              <span class="article-tag">Leadership</span>
-              <span class="article-meta">5 min read</span>
-            </div>
-            <h3>The Boss Who Lives Inside Us</h3>
-            <p>The voice that pushes you to over-prepare and never feel done isn't your boss — it's the boss you've internalized. On the bar that isn't just high but unclear.</p>
-            <div class="article-insight">"The bar isn't just high — it's unclear."</div>
-            <a class="article-link" href="https://newsletter.amywucoaching.com/p/the-boss-who-lives-inside-us" target="_blank" rel="noopener">Read the article</a>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="article-body">
-            <div class="article-tag-row">
-              <span class="article-tag">Career</span>
-              <span class="article-meta">5 min read</span>
-            </div>
-            <h3>Being Assertive Without Being Aggressive</h3>
-            <p>Generic assertiveness advice rarely helps — this piece shows how to calibrate your presence by context: decisive with executives, open with your team.</p>
-            <div class="article-insight">"Real presence isn't louder — it's calibrated to context."</div>
-            <a class="article-link" href="https://newsletter.amywucoaching.com/p/being-assertive-without-being-aggressive" target="_blank" rel="noopener">Read the article</a>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:2.5rem;">
-        <a class="btn" href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener">Read more on the newsletter →</a>
-      </div>
-    </div>
-  </section>
-
   <!-- ─── Final CTA ─── -->
   <section id="cta">
-    <h2>Clarity starts with a conversation.</h2>
+    <p class="eyebrow">Let's Talk</p>
+    <h2>Clarity starts with a <em>conversation</em>.</h2>
     <p>You don't need more advice. You need help revealing what you can't see from inside it.</p>
 
     <div class="cta-timeline">
@@ -1523,7 +485,7 @@
       <div class="cta-timeline-step">
         <span class="cta-step-num">2</span>
         <h4>Design the Fit</h4>
-        <p>Around your situation. 3–6 months.</p>
+        <p>Around your situation. 12 or 24 weeks.</p>
       </div>
       <div class="cta-timeline-step">
         <span class="cta-step-num">3</span>
@@ -1532,19 +494,9 @@
       </div>
     </div>
 
-    <div class="cta-guide-box" id="toolkit">
-      <p class="cta-guide-title">Get The 3-Shift Check-In</p>
-      <p class="cta-guide-sub">A one-page toolkit to spot what's worth doubling down on, what to let go of, and what to build next &mdash; in the AI era.</p>
-      <form class="lead-magnet-form" action="https://formspree.io/f/xdalygwy" method="POST">
-        <input type="hidden" name="_subject" value="3-Shift Check-In Download" />
-        <input type="hidden" name="_next" value="https://amywucoaching.com/downloads/three-shift-check-in.pdf" />
-        <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit" class="btn btn-light">Download</button>
-      </form>
-    </div>
+    <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
   </section>
 
-  <!-- ─── Footer ─── -->
   <footer>
     <div class="footer-row">
       <a href="https://www.credly.com/badges/77ad2fd2-978f-497a-91d1-247b42c8bcc8/public_url" target="_blank" rel="noopener" class="footer-badge-link">
@@ -1554,143 +506,65 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener" class="footer-social">
-        Newsletter
+      <a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener" class="footer-social">Newsletter</a>
+      <a href="https://newsletter.amywucoaching.com/feed" target="_blank" rel="noopener" class="footer-social" title="Subscribe via RSS">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.503 20.752a3.252 3.252 0 11-6.503 0 3.252 3.252 0 016.503 0zM1.677 6.082v4.15c6.988 0 12.65 5.662 12.65 12.65h4.15c0-9.271-7.529-16.8-16.8-16.8zm0-6.082v4.15C12.747 4.15 19.85 11.253 19.85 22.32H24C24 9.987 14.013 0 1.677 0z"/></svg>
+        RSS
       </a>
     </div>
     <p class="footer-copy">© 2026 Amy Wu Coaching. All rights reserved.</p>
   </footer>
 
-  <!-- ─── Newsletter Modal ─── -->
-  <div class="modal-overlay" id="newsletterModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeNewsletter()" aria-label="Close">✕</button>
-      <p class="eyebrow" style="margin-bottom:0.5rem;">Stay in the Loop</p>
-      <h2 style="font-size:1.6rem; margin-bottom:0.75rem; color:var(--charcoal);">Thinking that helps you lead.</h2>
-      <p style="font-size:0.95rem; color:var(--text-light); margin-bottom:1.5rem; line-height:1.75;">Articles on clarity, leadership, and navigating uncertainty — delivered when it's worth your time.</p>
-      <iframe src="https://newsletter.amywucoaching.com/embed" width="100%" height="200" style="border:none; background:transparent;" frameborder="0" scrolling="no"></iframe>
-    </div>
-  </div>
-
-  <!-- ─── Contact Modal ─── -->
-  <!-- ACTION: Replace YOUR_FORM_ID below with your Formspree form ID from formspree.io -->
-  <div class="modal-overlay" id="contactModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeContact()" aria-label="Close">✕</button>
-      <p class="eyebrow" style="margin-bottom:0.5rem;">Let's Talk</p>
-      <h2 style="font-size:1.5rem; margin-bottom:0.5rem; color:var(--charcoal);">Tell me a bit about where you are.</h2>
-      <p style="font-size:0.9rem; color:var(--text-light); margin-bottom:1.5rem; line-height:1.7;">I'll follow up within 1–2 business days.</p>
-      <form action="https://formspree.io/f/xdalygwy" method="POST" class="contact-form">
-        <div class="form-row">
-          <input type="text"  name="name"  placeholder="Your name"  required />
-          <input type="email" name="email" placeholder="Your email" required />
-        </div>
-        <select name="challenge" required>
-          <option value="" disabled selected>What's going on?</option>
-          <option value="change">Something has to change — but I'm not sure what</option>
-          <option value="rules">The rules keep changing — and no one's telling me how I'm being evaluated</option>
-          <option value="lonely">The room got quieter — I need a thinking partner</option>
-          <option value="unsure">I'm not sure yet — I just know I need to talk to someone</option>
-        </select>
-        <textarea name="message" rows="4" placeholder="Briefly describe what's going on and what you're hoping for..." required></textarea>
-        <button type="submit" class="btn" style="width:100%; margin-top:0.25rem;">Send Message →</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ─── Scripts ─── -->
   <script>
-    /* ── Navbar scroll behavior ── */
+    // Nav scroll state
     const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
+    const onScroll = () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
 
-    /* ── Mobile menu ── */
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.add('open');
-    });
-    document.getElementById('mobileClose').addEventListener('click', closeMobile);
-    function closeMobile() {
-      document.getElementById('mobileMenu').classList.remove('open');
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    window.closeMobile = () => mobileMenu.classList.remove('open');
+
+    // Testimonial carousel
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.t-dot');
+    const tPrev = document.getElementById('tPrev');
+    const tNext = document.getElementById('tNext');
+    let currentSlide = 0;
+    function showSlide(idx) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
     }
+    tPrev.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+    tNext.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => { currentSlide = i; showSlide(currentSlide); });
+    });
+    // Auto-rotate every 8 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 8000);
 
-    /* ── Fade-in on scroll ── */
+    // Fade-in on scroll
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    /* ── Testimonial carousel ── */
-    (function() {
-      var slides = document.querySelectorAll('.testimonial-slide');
-      var dots = document.querySelectorAll('.t-dot');
-      var prevBtn = document.getElementById('tPrev');
-      var nextBtn = document.getElementById('tNext');
-      var current = 0;
-      var total = slides.length;
-
-      function goTo(index) {
-        slides[current].classList.remove('active');
-        dots[current].classList.remove('active');
-        dots[current].removeAttribute('aria-current');
-        current = (index + total) % total;
-        slides[current].classList.add('active');
-        dots[current].classList.add('active');
-        dots[current].setAttribute('aria-current', 'true');
-      }
-
-      prevBtn.addEventListener('click', function() { goTo(current - 1); });
-      nextBtn.addEventListener('click', function() { goTo(current + 1); });
-
-      dots.forEach(function(dot, i) {
-        dot.addEventListener('click', function() { goTo(i); });
-      });
-
-      // Touch swipe support
-      var startX = 0;
-      var carousel = document.getElementById('testimonialCarousel');
-      carousel.addEventListener('touchstart', function(e) {
-        startX = e.touches[0].clientX;
-      }, { passive: true });
-      carousel.addEventListener('touchend', function(e) {
-        var diff = e.changedTouches[0].clientX - startX;
-        if (diff < -50) goTo(current + 1);
-        else if (diff > 50) goTo(current - 1);
-      });
-    })();
-
-    /* ── Newsletter modal ── */
-    function openNewsletter() {
-      document.getElementById('newsletterModal').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeNewsletter() {
-      document.getElementById('newsletterModal').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    document.getElementById('newsletterModal').addEventListener('click', function(e) {
-      if (e.target === this) closeNewsletter();
-    });
-
-    /* ── Contact modal ── */
-    function openContact() {
-      document.getElementById('contactModal').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeContact() {
-      document.getElementById('contactModal').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    document.getElementById('contactModal').addEventListener('click', function(e) {
-      if (e.target === this) closeContact();
-    });
   </script>
 
 </body>

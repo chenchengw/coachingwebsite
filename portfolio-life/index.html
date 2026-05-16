@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Life Design for Tech Leaders | Amy Wu</title>
+  <meta name="description" content="What if 'what's next' isn't another job — but a different architecture entirely? Portfolio life design for tech leaders. Modeled on what I'm building. Start before you need it." />
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Portfolio Life Design for Tech Leaders | Amy Wu" />
+  <meta property="og:description" content="What if 'what's next' isn't another job — but a different architecture entirely? I help tech leaders design portfolio lives: multiple ways of mattering, AI-native by intent, owned by you." />
+  <meta property="og:image" content="https://www.amywucoaching.com/images/og-share.jpg" />
+  <meta property="og:url" content="https://www.amywucoaching.com/portfolio-life/" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio Life Design for Tech Leaders | Amy Wu" />
+  <meta name="twitter:description" content="What if 'what's next' isn't another job — but a different architecture entirely? Designed before you need it." />
+  <meta name="twitter:image" content="https://www.amywucoaching.com/images/og-share.jpg" />
+
+  <!-- RSS auto-discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Amy Wu Coaching Newsletter" href="https://newsletter.amywucoaching.com/feed" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%232D2D38'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23967338'>AW</text></svg>" />
+
+  <!-- JSON-LD: Article + Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Portfolio Life Design for Tech Leaders",
+    "description": "Portfolio life design for tech leaders, modeled on what Amy Wu is building. AI-native by intent, owned by you. Start before you need it.",
+    "author": {
+      "@type": "Person",
+      "name": "Amy Wu",
+      "url": "https://www.amywucoaching.com/",
+      "jobTitle": "Executive Coach, AI Advisor, Builder",
+      "alumniOf": ["LinkedIn", "Instacart"]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Amy Wu"
+    },
+    "mainEntityOfPage": "https://www.amywucoaching.com/portfolio-life/"
+  }
+  </script>
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brown:       #967338;
+      --brown-dark:  #7D530C;
+      --charcoal:    #2D2D38;
+      --cream:       #EAF0EB;
+      --gray-light:  #F3F7F4;
+      --gray-mid:    #E3E3E3;
+      --text:        #2d2d2d;
+      --text-light:  #6b6b6b;
+      --white:       #ffffff;
+      --serif:       'Playfair Display', Georgia, serif;
+      --sans:        'Montserrat', Arial, sans-serif;
+      --max-w:       60rem;
+      --section-y:   4.5rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a   { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.25; }
+
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 1rem;
+    }
+
+    /* ─── Buttons ──────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      background: var(--brown);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.25s ease, transform 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover { background: var(--brown-dark); transform: scale(0.97); }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--brown);
+      color: var(--brown);
+    }
+    .btn-outline:hover { background: var(--brown); color: var(--white); transform: scale(0.97); }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--charcoal);
+    }
+    .btn-light:hover { background: var(--cream); transform: scale(0.97); }
+
+    /* ─── Navigation ───────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+    }
+    nav.scrolled {
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 1px 0 var(--gray-mid);
+      padding: 1rem 2rem;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      transition: color 0.35s ease;
+    }
+    nav.scrolled .nav-logo { color: var(--charcoal); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-left: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      transition: color 0.25s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--white); }
+    .nav-links a.active { border-bottom: 1px solid var(--brown); padding-bottom: 0.15rem; }
+    nav.scrolled .nav-links a { color: var(--text-light); }
+    nav.scrolled .nav-links a:hover,
+    nav.scrolled .nav-links a.active { color: var(--brown); }
+    nav.scrolled .nav-links a.active { border-bottom-color: var(--brown); }
+
+    .nav-cta {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.6);
+      padding: 0.5rem 1.2rem;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+    .nav-cta:hover { background: rgba(255,255,255,0.15); }
+    nav.scrolled .nav-cta {
+      color: var(--brown);
+      border-color: var(--brown);
+    }
+    nav.scrolled .nav-cta:hover { background: var(--brown); color: var(--white); }
+
+    /* ─── Hamburger (mobile) ───────────────────────────────────── */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--white);
+      transition: all 0.3s ease;
+    }
+    nav.scrolled .hamburger span { background: var(--charcoal); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--white);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--charcoal);
+    }
+    .mobile-menu a:hover { color: var(--brown); }
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--charcoal);
+    }
+
+    /* ─── Hero ─────────────────────────────────────────────────── */
+    #hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      background: linear-gradient(135deg, #1a1a2e 0%, #2D2D38 40%, #3d2e1e 100%);
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(150,115,56,0.08) 0%, transparent 70%);
+    }
+    .hero-inner {
+      max-width: 48rem;
+      padding: 6rem 2rem 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-inner .eyebrow { color: rgba(150, 115, 56, 0.9); }
+
+    #hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+    #hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--brown);
+    }
+    .hero-sub {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 38rem;
+      margin: 0 auto 2.5rem;
+      line-height: 1.85;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+    .hero-cta-note {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .hero-secondary-cta {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 1rem;
+      letter-spacing: 0.04em;
+    }
+    .hero-secondary-cta a {
+      color: var(--white);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      padding-bottom: 1px;
+      transition: border-color 0.2s ease;
+    }
+    .hero-secondary-cta a:hover { border-bottom-color: var(--white); }
+
+    /* ─── Bridge ───────────────────────────────────────────────── */
+    #bridge {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2D2D38 40%, #3d2e1e 100%);
+      padding: 4rem 2rem 5rem;
+      text-align: center;
+    }
+    .bridge-separator {
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background: var(--brown);
+      margin: 0 auto 3rem;
+      opacity: 0.6;
+    }
+    .bridge-signals {
+      max-width: 48rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+    .bridge-signals p {
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.75;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    /* ─── Section Shared ───────────────────────────────────────── */
+    section { padding: var(--section-y) 0; }
+
+    .section-header {
+      text-align: center;
+      max-width: 48rem;
+      margin: 0 auto 3rem;
+    }
+    .section-header h2 {
+      font-size: clamp(1.9rem, 4vw, 2.65rem);
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+    }
+    .section-header h2 em {
+      font-style: italic;
+      color: var(--brown);
+    }
+    .section-header p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .divider {
+      width: 2.5rem;
+      height: 2px;
+      background: var(--brown);
+      margin: 1.25rem auto 0;
+    }
+
+    /* ─── Architecture section ─────────────────────────────────── */
+    #architecture { background: var(--cream); }
+
+    .arch-prose {
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+    .arch-prose p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .arch-prose p.lede {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.55;
+      margin-bottom: 1.75rem;
+      font-weight: 400;
+    }
+    .arch-prose strong {
+      color: var(--charcoal);
+      font-weight: 600;
+    }
+    .arch-prose em {
+      color: var(--brown-dark);
+      font-style: italic;
+    }
+
+    .arch-callout {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--charcoal);
+      background: rgba(150,115,56,0.08);
+      border-left: 3px solid var(--brown);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0 2.25rem;
+      line-height: 1.65;
+    }
+    .arch-callout cite {
+      display: block;
+      margin-top: 0.85rem;
+      font-style: normal;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+
+    /* ─── Flywheel section ─────────────────────────────────────── */
+    #flywheel-section { background: var(--white); }
+
+    .flywheel-wrap {
+      max-width: 44rem;
+      margin: 0 auto 2.5rem;
+      padding: 1rem 0;
+    }
+    .flywheel-wrap svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .spoke-list {
+      max-width: 42rem;
+      margin: 1rem auto 2.5rem;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .spoke-list li {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .spoke-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 6px;
+      height: 6px;
+      background: var(--brown);
+      border-radius: 50%;
+    }
+    .spoke-list li strong {
+      color: var(--charcoal);
+      font-weight: 600;
+    }
+
+    .flywheel-close {
+      max-width: 42rem;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--text);
+      text-align: left;
+    }
+    .flywheel-close strong { color: var(--charcoal); font-weight: 600; }
+
+    /* ─── Urgency CTA ──────────────────────────────────────────── */
+    #urgency {
+      background: var(--charcoal);
+      text-align: center;
+      padding: 4.5rem 2rem;
+    }
+    #urgency .eyebrow { color: var(--brown); }
+    #urgency h2 {
+      font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+      color: var(--white);
+      max-width: 38rem;
+      margin: 0 auto 1.5rem;
+      font-weight: 400;
+    }
+    #urgency h2 em {
+      font-style: italic;
+      color: var(--brown);
+      font-weight: 400;
+    }
+    #urgency p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 38rem;
+      margin: 0 auto 1.25rem;
+      line-height: 1.85;
+    }
+    #urgency .btn-light {
+      padding: 0.8rem 2rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.15);
+      margin-top: 1.5rem;
+    }
+    #urgency .btn-light:hover {
+      box-shadow: 0 0 0 6px rgba(255,255,255,0.2);
+      transform: scale(0.98);
+    }
+    .urgency-secondary {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+    .urgency-secondary a {
+      color: rgba(255,255,255,0.85);
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      padding-bottom: 1px;
+    }
+    .urgency-secondary a:hover { border-bottom-color: var(--white); color: var(--white); }
+
+    /* ─── Footer ───────────────────────────────────────────────── */
+    footer {
+      background: #16161e;
+      padding: 2.5rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-social {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s ease;
+    }
+    .footer-social:hover { color: var(--brown); }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── Fade-in animations ───────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── Responsive ───────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-right { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      :root { --section-y: 3rem; }
+      #hero h1 { font-size: 1.8rem; }
+      .hero-inner { padding: 6rem 1.25rem 3rem; }
+      .container { padding: 0 1.25rem; }
+      .arch-callout { padding: 1rem 1.1rem; font-size: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Navigation ─── -->
+  <nav id="nav">
+    <a class="nav-logo" href="../">Amy Wu Coaching</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../services/">Services</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener">Newsletter</a></li>
+      </ul>
+      <a class="nav-cta" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Free Clarity Call</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-close" id="mobileClose">✕</div>
+    <a href="../services/"   onclick="closeMobile()">Services</a>
+    <a href="../about/"      onclick="closeMobile()">About</a>
+    <a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener" onclick="closeMobile()">Newsletter</a>
+    <a href="https://calendly.com/chenchengwu88/30min" target="_blank" class="btn" style="font-size:0.8rem;" onclick="closeMobile()">Book a Clarity Call →</a>
+  </div>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero">
+    <div class="hero-inner fade-in visible">
+      <p class="eyebrow">Portfolio Life</p>
+      <h1>What if "what's next" isn't another job &mdash; but a <em>different architecture entirely</em>?</h1>
+      <p class="hero-sub">I help tech leaders design portfolio lives &mdash; multiple ways of mattering, AI-native by intent, owned by you. Start before you need it.</p>
+      <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
+      <p class="hero-cta-note">I take on a small number of new clients each quarter &mdash; let's have a free strategy session to decide the fit.</p>
+      <p class="hero-secondary-cta">Or read about <a href="../about/">how I'm living this &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- ─── Bridge ─── -->
+  <section id="bridge">
+    <span class="bridge-separator"></span>
+    <div class="bridge-signals">
+      <p class="fade-in">You were trained to choose among four traditional paths &mdash; found a company, join a startup, climb the ladder, graduate to coach.</p>
+      <p class="fade-in">Under AI, every one of them is getting harder.</p>
+      <p class="fade-in">The default story &mdash; pick one, commit fully, optimize hard &mdash; is becoming a worse bet by the quarter.</p>
+      <p class="fade-in">The problem isn't the paths. Nobody told us there was another shape.</p>
+    </div>
+  </section>
+
+  <!-- ─── Architecture ─── -->
+  <section id="architecture">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="eyebrow">The Architecture</p>
+        <h2>A different shape &mdash; <em>designed, not defaulted into</em></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="arch-prose fade-in">
+        <p class="lede">The Portfolio Life isn't a hedge. It isn't dropping out. It isn't semi-retirement. It's an architecture.</p>
+
+        <p>It's the deliberate design of a life made of multiple commitments &mdash; some that compound on each other, some that feed the part of you a single role never quite could &mdash; such that you own the allocation. You decide how much of you goes where. You change the mix as you evolve.</p>
+
+        <div class="arch-callout">
+          "The most important career concept that no one is teaching executives before they walk out the door."
+          <cite>Forbes Coaches Council</cite>
+        </div>
+
+        <p>Forbes is describing it as a retirement strategy. <strong>I work with tech leaders 5&ndash;15 years before that</strong> &mdash; while you still have the runway, the credibility, the network, and the time to design it deliberately.</p>
+
+        <p>Because the thing that makes a Portfolio Life work is that <em>you started before you needed it</em>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Flywheel ─── -->
+  <section id="flywheel-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="eyebrow">How It Compounds</p>
+        <h2>Four activities that <em>reinforce each other</em></h2>
+        <div class="divider"></div>
+        <p>A Portfolio Life isn't just a collection of part-time things. It's a flywheel &mdash; each activity makes the next stronger. Remove any one and the wheel breaks.</p>
+      </div>
+
+      <div class="flywheel-wrap fade-in">
+        <svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="flywheelTitle flywheelDesc">
+          <title id="flywheelTitle">The Portfolio Life Flywheel</title>
+          <desc id="flywheelDesc">A four-spoke flywheel with Portfolio Life at the center. Spokes clockwise from top: Operating (AI advisor and builder), Coaching (1:1 client work), Writing (clarify thinking, build audience), Community (host peers in transition). Arrows show clockwise compounding.</desc>
+
+          <defs>
+            <marker id="pfla" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+              <path d="M 0 0 L 9 4.5 L 0 9 z" fill="#967338" />
+            </marker>
+          </defs>
+
+          <!-- Arrows (clockwise) -->
+          <g stroke="#967338" stroke-width="1.8" fill="none" opacity="0.75">
+            <line x1="420" y1="150" x2="490" y2="220" marker-end="url(#pfla)" />
+            <line x1="510" y1="294" x2="440" y2="365" marker-end="url(#pfla)" />
+            <line x1="335" y1="385" x2="230" y2="320" marker-end="url(#pfla)" />
+            <line x1="225" y1="220" x2="295" y2="150" marker-end="url(#pfla)" />
+          </g>
+
+          <!-- Center hub -->
+          <circle cx="360" cy="240" r="58" fill="#967338" />
+          <text x="360" y="232" text-anchor="middle" style="font-family: 'Playfair Display', Georgia, serif; font-size: 14px; font-weight: 700; fill: #ffffff;">Portfolio Life</text>
+          <text x="360" y="252" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 10px; fill: #ffffff; opacity: 0.92;">You own the</text>
+          <text x="360" y="266" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 10px; fill: #ffffff; opacity: 0.92;">allocation</text>
+
+          <!-- Node: Operating (top) -->
+          <g transform="translate(295, 100)">
+            <rect width="130" height="50" rx="8" fill="#ffffff" stroke="#967338" stroke-width="1.5" />
+            <text x="65" y="22" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; fill: #2D2D38;">Operating</text>
+            <text x="65" y="39" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 10px; fill: #6b6b6b;">AI advisor + builder</text>
+          </g>
+
+          <!-- Node: Coaching (right) -->
+          <g transform="translate(500, 218)">
+            <rect width="130" height="50" rx="8" fill="#ffffff" stroke="#967338" stroke-width="1.5" />
+            <text x="65" y="22" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; fill: #2D2D38;">Coaching</text>
+            <text x="65" y="39" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 10px; fill: #6b6b6b;">1:1 client work</text>
+          </g>
+
+          <!-- Node: Writing (bottom) -->
+          <g transform="translate(295, 365)">
+            <rect width="130" height="50" rx="8" fill="#ffffff" stroke="#967338" stroke-width="1.5" />
+            <text x="65" y="22" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; fill: #2D2D38;">Writing</text>
+            <text x="65" y="39" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 10px; fill: #6b6b6b;">clarify · audience</text>
+          </g>
+
+          <!-- Node: Community (left) -->
+          <g transform="translate(90, 218)">
+            <rect width="130" height="50" rx="8" fill="#ffffff" stroke="#967338" stroke-width="1.5" />
+            <text x="65" y="22" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; fill: #2D2D38;">Community</text>
+            <text x="65" y="39" text-anchor="middle" style="font-family: 'Montserrat', sans-serif; font-size: 10px; fill: #6b6b6b;">host · peers</text>
+          </g>
+        </svg>
+      </div>
+
+      <ul class="spoke-list fade-in">
+        <li><strong>Operating</strong> &mdash; AI advisor, builder, fractional executive. Keeps you context-rich. Without it, the rest goes stale.</li>
+        <li><strong>Coaching</strong> &mdash; 1:1 work with peers in transitions you've lived. Operator pattern becomes pay-it-forward income; client encounters feed your operator practice with new patterns.</li>
+        <li><strong>Writing</strong> &mdash; Newsletters, essays, posts. Clarifies your own thinking. Builds the audience that funnels into the work.</li>
+        <li><strong>Community</strong> &mdash; The social fabric that holds peers in transitions. The room where you're a person, not a title.</li>
+      </ul>
+
+      <p class="flywheel-close fade-in">Center of the wheel: <strong>you own the allocation.</strong> This week you might be 60% operating, 20% coaching, 20% writing. Next month, 40/40/20. The wheel keeps turning either way. That's the architecture.</p>
+    </div>
+  </section>
+
+  <!-- ─── Urgency CTA ─── -->
+  <section id="urgency">
+    <p class="eyebrow fade-in">When to Start</p>
+    <h2 class="fade-in">Start before <em>you need it</em>.</h2>
+    <p class="fade-in">The Portfolio Life takes three to five years to build right. The traditional paths are cracking faster than that.</p>
+    <p class="fade-in">The relationships, the audience, the AI fluency, the community, the operator credibility you'll need five years from now &mdash; none of those compound retroactively.</p>
+    <a class="btn btn-light fade-in" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
+    <p class="urgency-secondary fade-in">Or read about <a href="../about/">how I'm living this &rarr;</a></p>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="footer-row">
+      <a href="https://www.linkedin.com/in/chenchengwu/" target="_blank" rel="noopener" class="footer-social">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://newsletter.amywucoaching.com/" target="_blank" rel="noopener" class="footer-social">
+        Newsletter
+      </a>
+      <a href="https://newsletter.amywucoaching.com/feed" target="_blank" rel="noopener" class="footer-social" title="Subscribe via RSS">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.503 20.752a3.252 3.252 0 11-6.503 0 3.252 3.252 0 016.503 0zM1.677 6.082v4.15c6.988 0 12.65 5.662 12.65 12.65h4.15c0-9.271-7.529-16.8-16.8-16.8zm0-6.082v4.15C12.747 4.15 19.85 11.253 19.85 22.32H24C24 9.987 14.013 0 1.677 0z"/></svg>
+        RSS
+      </a>
+    </div>
+    <p class="footer-copy">© 2026 Amy Wu Coaching. All rights reserved.</p>
+  </footer>
+
+  <!-- ─── Scripts ─── -->
+  <script>
+    // Nav scroll state
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    window.closeMobile = () => mobileMenu.classList.remove('open');
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
