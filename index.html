@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amy Wu — Build a Resilient Career in the AI Era</title>
-  <meta name="description" content="Coaching for tech leaders building careers that hold up when any single path doesn't. Calibration-committee insider. Coach, advisor, and AI builder." />
+  <meta name="description" content="Coaching for tech leaders building careers that hold up when any single path doesn't. A decade in senior engineering leadership. Coach, advisor, and AI builder." />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Amy Wu — Build a Resilient Career in the AI Era" />
@@ -278,6 +278,18 @@
       .hero-inner { padding: 6rem 1.25rem 3rem; }
       .container { padding: 0 1.25rem; }
     }
+
+    /* Community waitlist band */
+    #community { background: var(--cream); text-align: center; }
+    #community h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); color: var(--charcoal); margin-bottom: 1rem; }
+    #community h2 em { font-style: italic; color: var(--brown); }
+    .community-lead { max-width: 38rem; margin: 0 auto 2rem; color: var(--text-light); font-size: 1.05rem; line-height: 1.8; }
+    .waitlist-form { display: flex; gap: 0.75rem; max-width: 32rem; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+    .waitlist-form input[type="email"] { flex: 1 1 16rem; padding: 0.85rem 1.1rem; border: 1.5px solid var(--gray-mid); border-radius: 2px; font-family: var(--sans); font-size: 0.95rem; color: var(--text); background: var(--white); }
+    .waitlist-form input[type="email"]:focus { outline: none; border-color: var(--brown); }
+    .waitlist-form button { white-space: nowrap; }
+    .waitlist-note { font-size: 0.85rem; color: var(--text-light); margin-top: 1rem; }
+    .waitlist-thanks { display: none; color: var(--brown-dark); font-size: 1.05rem; margin-top: 1rem; font-family: var(--serif); font-style: italic; }
   </style>
 </head>
 
@@ -340,9 +352,13 @@
         <div class="amy-bio">
           <p>I'm a <strong>coach, advisor, and AI builder</strong> who helps tech leaders design resilient careers in the AI era.</p>
 
-          <p>I spent over a decade leading engineering at LinkedIn and Instacart &mdash; IC to Engineering Director, five promotions within 10 years, and sitting in calibration rooms deciding senior-level promotions. That work taught me what those rooms actually weigh &mdash; <em>and what they don't, even when candidates think they do.</em></p>
+          <p>I spent over a decade leading engineering at LinkedIn and Instacart &mdash; IC to Engineering Director, five promotions within 10 years. That climb taught me what actually moves the needle at each level &mdash; <em>and what doesn't, even when it feels like it should.</em></p>
 
-          <p>Today I support tech leaders building a resilient career and life in the AI era &mdash; using the MOAT framework I designed and live. The work: calibration-room directness with deep listening, creating space to see what's been avoided and the courage to act.</p>
+          <p>Today I support tech leaders building a resilient career and life in the AI era &mdash; using the MOAT framework I designed and live.</p>
+
+          <p style="margin: 0.3rem 0 1.1rem; font-size: 1rem; color: var(--text-light);"><strong style="color: var(--brown-dark);">M</strong> (Make) &nbsp;&middot;&nbsp; <strong style="color: var(--brown-dark);">O</strong> (Outlook) &nbsp;&middot;&nbsp; <strong style="color: var(--brown-dark);">A</strong> (Audience) &nbsp;&middot;&nbsp; <strong style="color: var(--brown-dark);">T</strong> (Tribe)</p>
+
+          <p>The work: a senior leader's directness with deep listening, creating space to see what's been avoided and the courage to act.</p>
 
           <a class="amy-bio-link" href="about/#approach">See the MOAT framework &rarr;</a>
         </div>
@@ -355,14 +371,14 @@
     <div class="container">
       <div class="section-header fade-in">
         <p class="eyebrow">Why work with Amy</p>
-        <h2>Hands-on practitioner, <em>calibration-room insider</em></h2>
+        <h2>Hands-on practitioner, <em>senior-leader mindset</em></h2>
         <div class="divider"></div>
       </div>
 
       <div class="why-grid">
         <div class="why-item fade-in">
-          <h3>Calibration-committee insider</h3>
-          <p>10+ years at LinkedIn and Instacart, sat in calibration rooms deciding senior promotions. I know what those rooms actually weigh &mdash; and what they don't, even when candidates think they do.</p>
+          <h3>Senior-leader mindset</h3>
+          <p>10+ years leading engineering at LinkedIn and Instacart, through five promotions of my own. I help you build senior-level influence regardless of your title.</p>
         </div>
         <div class="why-item fade-in">
           <h3>Senior-level placement track record</h3>
@@ -469,6 +485,51 @@
       </div>
     </div>
   </section>
+
+  <!-- ─── Community waitlist ─── -->
+  <section id="community">
+    <div class="container">
+      <p class="eyebrow">The Community</p>
+      <h2>Build Your MOAT <em>Together</em></h2>
+      <p class="community-lead">A cohort for tech leaders building a sustainable, one-person AI-native business &mdash; with peers making the same move.</p>
+      <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/xdalygwy" method="POST">
+        <input type="hidden" name="_subject" value="New waitlist signup — Build Your MOAT Together" />
+        <input type="hidden" name="interest" value="Build Your MOAT Together — community waitlist" />
+        <input type="email" name="email" placeholder="Your email" required aria-label="Your email" />
+        <button type="submit" class="btn">Join the waitlist &rarr;</button>
+      </form>
+      <p class="waitlist-note">Cohorts open soon. Add your name and I'll be in touch.</p>
+      <p class="waitlist-thanks" id="waitlistThanks">Thank you &mdash; you're on the list. I'll be in touch.</p>
+    </div>
+  </section>
+  <script>
+    (function () {
+      var form = document.getElementById('waitlistForm');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('button');
+        btn.disabled = true;
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (r) {
+          if (r.ok) {
+            form.style.display = 'none';
+            document.querySelector('#community .waitlist-note').style.display = 'none';
+            document.getElementById('waitlistThanks').style.display = 'block';
+          } else {
+            btn.disabled = false;
+            alert('Something went wrong — please try again.');
+          }
+        }).catch(function () {
+          btn.disabled = false;
+          alert('Something went wrong — please try again.');
+        });
+      });
+    })();
+  </script>
 
   <!-- ─── Final CTA ─── -->
   <section id="cta">
