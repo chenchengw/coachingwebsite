@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amy Wu — Life & Executive Coaching</title>
+  <meta name="description" content="Coaching for engineering leaders, managers, and founders navigating uncertainty, leadership transitions, and the decisions that actually matter. Clarity and confidence in an uncertain AI era." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%232D2D38'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23967338'>AW</text></svg>" />
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brown:       #967338;
+      --brown-dark:  #7D530C;
+      --charcoal:    #2D2D38;
+      --cream:       #EAF0EB;
+      --gray-light:  #F3F7F4;
+      --gray-mid:    #E3E3E3;
+      --text:        #2d2d2d;
+      --text-light:  #6b6b6b;
+      --white:       #ffffff;
+      --serif:       'Playfair Display', Georgia, serif;
+      --sans:        'Montserrat', Arial, sans-serif;
+      --max-w:       72rem;
+      --section-y:   6rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a   { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ─── Typography ───────────────────────────────────────────── */
+    h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.25; }
+
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 1rem;
+    }
+
+    /* ─── Buttons ──────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      background: var(--brown);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.25s ease, transform 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover { background: var(--brown-dark); transform: scale(0.97); }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--brown);
+      color: var(--brown);
+    }
+    .btn-outline:hover { background: var(--brown); color: var(--white); transform: scale(0.97); }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--charcoal);
+    }
+    .btn-light:hover { background: var(--cream); transform: scale(0.97); }
+
+    /* ─── Navigation ───────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+    }
+    nav.scrolled {
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 1px 0 var(--gray-mid);
+      padding: 1rem 2rem;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      transition: color 0.35s ease;
+    }
+    nav.scrolled .nav-logo { color: var(--charcoal); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-left: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      transition: color 0.25s ease;
+    }
+    .nav-links a:hover { color: var(--white); }
+    nav.scrolled .nav-links a { color: var(--text-light); }
+    nav.scrolled .nav-links a:hover { color: var(--brown); }
+
+    .nav-cta {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.6);
+      padding: 0.5rem 1.2rem;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+    .nav-cta:hover { background: rgba(255,255,255,0.15); }
+    nav.scrolled .nav-cta {
+      color: var(--brown);
+      border-color: var(--brown);
+    }
+    nav.scrolled .nav-cta:hover { background: var(--brown); color: var(--white); }
+
+    /* ─── Hamburger (mobile) ───────────────────────────────────── */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--white);
+      transition: all 0.3s ease;
+    }
+    nav.scrolled .hamburger span { background: var(--charcoal); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--white);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--charcoal);
+    }
+    .mobile-menu a:hover { color: var(--brown); }
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--charcoal);
+    }
+
+    /* ─── Hero ─────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600&q=80') center/cover no-repeat;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-inner {
+      max-width: 56rem;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-inner .eyebrow { color: rgba(150, 115, 56, 0.9); }
+
+    #hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    #hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 38rem;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .hero-statements {
+      max-width: 44rem;
+      margin: 0 auto 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+      background: rgba(255,255,255,0.07);
+      border-left: 2px solid rgba(150,115,56,0.6);
+      padding: 1.5rem 2rem;
+      border-radius: 0 4px 4px 0;
+    }
+    .hero-statements p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .hero-statements p strong {
+      font-weight: 700;
+      color: rgba(255,255,255,1);
+    }
+
+    .hero-personal {
+      max-width: 38rem;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+    .hero-personal p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+    .hero-emphasis {
+      font-family: var(--serif);
+      font-size: 1.3rem !important;
+      font-style: italic;
+      color: var(--white) !important;
+      font-weight: 400 !important;
+      margin: 0.75rem 0 !important;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .hero-scroll::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* ─── Section Shared ───────────────────────────────────────── */
+    section { padding: var(--section-y) 0; }
+
+    .section-header {
+      text-align: center;
+      max-width: 40rem;
+      margin: 0 auto 4rem;
+    }
+    .section-header h2 { font-size: clamp(1.9rem, 4vw, 2.65rem); color: var(--charcoal); margin-bottom: 1rem; }
+    .section-header p  { color: var(--text-light); font-size: 1.05rem; line-height: 1.8; }
+
+    /* ─── Who This Is For ──────────────────────────────────────── */
+    #services { background: var(--cream); }
+
+    .for-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .for-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 2.5rem 2rem;
+      border-top: 3px solid var(--brown);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .for-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .for-card h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .services-intro {
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin: -0.5rem auto 2.5rem;
+      font-style: italic;
+    }
+
+    .service-type {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 0.6rem;
+    }
+    .service-tagline {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+    .for-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .for-card li {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      padding: 0.35rem 0 0.35rem 1.2rem;
+      position: relative;
+    }
+    .for-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--brown);
+    }
+
+    /* ─── Nav logo text ────────────────────────────────────────── */
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: clamp(0.95rem, 3vw, 1.25rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      transition: color 0.35s ease;
+    }
+    nav.scrolled .nav-logo { color: var(--charcoal); }
+
+    /* ─── About ────────────────────────────────────────────────── */
+    #about { background: var(--cream); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .about-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, #c4a97d 0%, #967338 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: var(--sans);
+    }
+
+    .about-photo-wrap::before {
+      content: '';
+      position: absolute;
+      top: -1.5rem;
+      left: -1.5rem;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      border: 2px solid var(--brown);
+      border-radius: 4px;
+      opacity: 0.35;
+    }
+
+    .about-text h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .about-text p {
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    .about-credentials {
+      list-style: none;
+      margin: 2rem 0 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .about-credentials li {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .about-credentials li::before {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--brown);
+      flex-shrink: 0;
+    }
+
+    /* ─── About credential badge strip ─────────────────────────── */
+    .about-badge-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.75rem 0 2rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--white);
+      border-radius: 4px;
+      border: 1px solid var(--gray-mid);
+    }
+    .about-logos-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      opacity: 0.5;
+      margin: 0;
+    }
+    .about-company-logos {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+    .about-company-logos img {
+      height: 56px;   /* Instacart — middle */
+      width: auto;
+      flex-shrink: 0;
+      opacity: 0.9;
+    }
+    .about-company-logos img[alt="LinkedIn"]          { height: 68px; }
+    .about-company-logos img[alt="Purdue University"] { height: 32px; }
+    .about-cred-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .cred-tag {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      background: var(--cream);
+      border: 1px solid rgba(150,115,56,0.3);
+      padding: 0.35rem 0.8rem;
+      border-radius: 2px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ─── Testimonials ─────────────────────────────────────────── */
+    #testimonials { background: var(--gray-light); }
+
+    #testimonials .section-header h2 { color: var(--charcoal); }
+    #testimonials .section-header p  { color: var(--text-light); }
+    #testimonials .eyebrow           { color: rgba(150,115,56,0.8); }
+
+    .testimonial-track-wrap {
+      overflow: hidden;
+      position: relative;
+      margin: 0 -2rem;
+      padding: 0 2rem;
+    }
+
+    .testimonial-track-wrap::before,
+    .testimonial-track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 6rem;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .testimonial-track-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, var(--gray-light), transparent);
+    }
+    .testimonial-track-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, var(--gray-light), transparent);
+    }
+
+    .testimonial-track {
+      display: flex;
+      gap: 1.75rem;
+      animation: marquee 35s linear infinite;
+      width: max-content;
+    }
+    .testimonial-track:hover { animation-play-state: paused; }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .t-card {
+      width: 340px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(150,115,56,0.18);
+      border-radius: 6px;
+      padding: 2.25rem;
+      flex-shrink: 0;
+    }
+
+    .t-quote {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .t-body {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .t-avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: var(--brown);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .t-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: 0.02em;
+    }
+    .t-title {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 0.1rem;
+    }
+
+    /* ─── t-avatar image ───────────────────────────────────────── */
+    .t-avatar-img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* ─── Articles ─────────────────────────────────────────────── */
+    #articles { background: var(--gray-light); }
+
+    .article-track-wrap {
+      overflow: hidden;
+      position: relative;
+      margin: 0 -2rem;
+      padding: 0 2rem;
+    }
+    .article-track-wrap::before,
+    .article-track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 6rem;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .article-track-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, var(--gray-light), transparent);
+    }
+    .article-track-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, var(--gray-light), transparent);
+    }
+    .article-track {
+      display: flex;
+      gap: 1.75rem;
+      animation: marquee 40s linear infinite;
+      width: max-content;
+    }
+    .article-track:hover { animation-play-state: paused; }
+    .article-track .article-card { width: 360px; flex-shrink: 0; }
+
+    .article-card {
+      background: var(--white);
+      border-radius: 4px;
+      border-top: 3px solid var(--brown);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .article-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
+    }
+
+    .article-tag-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .article-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown);
+      border: 1px solid rgba(150,115,56,0.3);
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+    }
+
+    .article-meta {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .article-insight {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      background: rgba(150,115,56,0.06);
+      border-left: 3px solid var(--brown);
+      padding: 0.65rem 0.9rem;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .article-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+
+    .article-body h3 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .article-body p {
+      font-size: 0.98rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      flex: 1;
+    }
+
+    .article-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-top: 1.5rem;
+      transition: gap 0.2s ease;
+    }
+    .article-link:hover { gap: 0.7rem; }
+    .article-link::after { content: '→'; }
+
+    /* footer badge/linkedin rules are in the Footer section below */
+
+    /* ─── Newsletter Button (nav) ──────────────────────────────── */
+    .nav-newsletter {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      font-family: var(--sans);
+      transition: color 0.25s ease;
+    }
+    .nav-newsletter:hover { color: var(--white); }
+    nav.scrolled .nav-newsletter { color: var(--text-light); }
+    nav.scrolled .nav-newsletter:hover { color: var(--brown); }
+
+    /* ─── Newsletter Button (mobile menu) ──────────────────────── */
+    .mobile-newsletter {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--charcoal);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .mobile-newsletter:hover { color: var(--brown); }
+
+    /* ─── Newsletter Modal ──────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal-box {
+      background: var(--white);
+      border-radius: 6px;
+      padding: 2.5rem 2.5rem 2rem;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+      font-size: 1.1rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--text-light);
+      line-height: 1;
+      transition: color 0.2s ease;
+    }
+    .modal-close:hover { color: var(--charcoal); }
+
+    /* ─── Contact Form ──────────────────────────────────────────── */
+    .contact-form { display: flex; flex-direction: column; gap: 0.85rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+    @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      border: 1px solid var(--gray-mid);
+      border-radius: 3px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s ease;
+    }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus { outline: none; border-color: var(--brown); }
+    .contact-form textarea { resize: vertical; }
+
+    /* ─── Final CTA ────────────────────────────────────────────── */
+    #cta {
+      background: var(--charcoal);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    #cta .eyebrow { color: var(--brown); }
+    #cta h2 {
+      font-size: clamp(1.3rem, 2.8vw, 1.6rem);
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    #cta p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 34rem;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+    .cta-note {
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+    }
+    .cta-or {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 1rem 0 0.5rem;
+    }
+    .cta-email {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.03em;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+    .cta-email:hover { color: var(--white); }
+    #cta .btn-light {
+      padding: 1.1rem 3rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.15em;
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.15);
+    }
+    #cta .btn-light:hover {
+      box-shadow: 0 0 0 6px rgba(255,255,255,0.2);
+      transform: scale(0.98);
+    }
+
+    /* ─── Mobile sticky CTA ─────────────────────────────────────── */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 90;
+      background: var(--brown);
+      text-align: center;
+      padding: 0.9rem 1rem;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
+    }
+    .mobile-cta-bar a {
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ─── Footer ───────────────────────────────────────────────── */
+    footer {
+      background: #16161e;
+      padding: 3.5rem 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-badge img { height: 64px; width: auto; }
+
+    .footer-linkedin a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s ease;
+    }
+    .footer-linkedin a:hover { color: var(--brown); }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.05em;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 100%;
+      max-width: 40rem;
+    }
+
+    /* ─── Divider ──────────────────────────────────────────────── */
+    .divider {
+      width: 2.5rem;
+      height: 2px;
+      background: var(--brown);
+      margin: 1.25rem auto 0;
+    }
+
+    /* ─── Fade-in animations ───────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── Responsive ───────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .for-grid,
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-badge-strip { align-items: flex-start; }
+      .about-photo-wrap::before { display: none; }
+      .nav-right { display: none; }
+      .hamburger { display: flex; }
+      .footer-badge { flex-direction: column; }
+    }
+
+    @media (max-width: 900px) {
+      .mobile-cta-bar { display: block; }
+      body { padding-bottom: 3.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      :root { --section-y: 4rem; }
+      #hero h1 { font-size: 2.2rem; }
+      .hero-inner { padding: 6rem 1.25rem 3rem; }
+      .hero-statements { padding: 1rem 1.25rem; }
+      .about-photo, .about-photo-placeholder { aspect-ratio: 3/2; }
+    }
+
+    @media (max-width: 480px) {
+      .t-card { width: 280px; }
+      .article-track .article-card { width: 290px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Navigation ─── -->
+  <nav id="nav">
+    <a class="nav-logo" href="#hero">Amy Wu Coaching</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://cc12170503.substack.com/" target="_blank" rel="noopener">Newsletter</a></li>
+      </ul>
+      <button class="nav-newsletter" onclick="openContact()">Contact</button>
+      <a class="nav-cta" href="https://calendly.com/chenchengwu88/30min" target="_blank">Schedule a Free Intro Session</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-close" id="mobileClose">✕</div>
+    <a href="#services"  onclick="closeMobile()">Services</a>
+    <a href="#about"     onclick="closeMobile()">About</a>
+    <a href="https://cc12170503.substack.com/" target="_blank" rel="noopener" onclick="closeMobile()">Newsletter</a>
+    <button class="mobile-newsletter" onclick="closeMobile(); openNewsletter();">Subscribe</button>
+    <button class="mobile-newsletter" onclick="closeMobile(); openContact();">Contact</button>
+    <a href="https://calendly.com/chenchengwu88/30min" target="_blank" class="btn" style="font-size:0.8rem;" onclick="closeMobile()">Book a Clarity Call →</a>
+  </div>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero">
+    <div class="hero-inner fade-in visible">
+      <h1>When the AI Era Rewrites the Rules, It's Time to <em>Rewrite Your Story</em></h1>
+      <div class="hero-statements">
+        <p>You might be an <strong>engineering leader</strong> watching your role get redefined by <strong>AI</strong>, <strong>reorgs</strong>, and <strong>shifting expectations</strong> — wondering whether the playbook you built your career on still applies.</p>
+        <p>You might be the <strong>only woman or minority in the room</strong>—carrying the quiet pressure to <strong>prove yourself</strong>, <strong>speak up</strong>, and <strong>belong</strong>.</p>
+        <p>You might be a <strong>high-achiever</strong> feeling <strong>anxious</strong> and <strong>uncertain</strong> — sensing that the lane you built your career in is shifting beneath you.</p>
+      </div>
+      <div class="hero-personal">
+        <p>If any of this resonates, I want you to know:</p>
+        <p class="hero-emphasis">I understand. Because I've been there—many times.</p>
+        <p>You don't have to figure it out alone.<br/>I'd love to help you find clarity and rewrite what comes next.</p>
+      </div>
+      <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Let's start with a conversation →</a>
+    </div>
+    <div class="hero-scroll">scroll</div>
+  </section>
+
+  <!-- ─── Services ─── -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="eyebrow">Ways to Work With Me</p>
+        <h2>Services</h2>
+        <div class="divider"></div>
+      </div>
+      <p class="services-intro">All sessions are 1:1. I also offer one or more free exploration sessions so you can decide if the fit and chemistry feel right before committing.</p>
+      <div class="for-grid">
+        <div class="for-card fade-in">
+          <p class="service-type">Identity</p>
+          <h3>Life Coaching</h3>
+          <p class="service-tagline">For when the story you've been telling yourself about your career no longer fits who you're becoming.</p>
+          <ul>
+            <li>Separate your identity from your title, role, or specialization</li>
+            <li>Figure out what you actually want — not just what looks impressive</li>
+            <li>Make high-stakes decisions without the spiral of doubt</li>
+            <li>Stop optimizing for a version of success that no longer fits</li>
+          </ul>
+        </div>
+        <div class="for-card fade-in">
+          <p class="service-type">Growth</p>
+          <h3>Leadership Coaching</h3>
+          <p class="service-tagline">For the leader navigating shifting expectations — where the rules keep changing and the playbook you relied on no longer applies.</p>
+          <ul>
+            <li>Lead through ambiguity when roles, teams, and priorities are being redefined</li>
+            <li>Handle difficult situations — conflict, hard conversations, high-stakes moments — with steadiness</li>
+            <li>Increase your impact without adding more hours to your plate</li>
+            <li>Build the influence and stakeholder relationships that create real alignment</li>
+          </ul>
+        </div>
+        <div class="for-card fade-in">
+          <p class="service-type">Clarity</p>
+          <h3>Advisory</h3>
+          <p class="service-tagline">For when you need an experienced outside perspective — on your organization, your strategy, or your next chapter.</p>
+          <ul>
+            <li>Restructure your engineering org for the AI era — team design, capability shifts, and new ways of working</li>
+            <li>Shape technical strategy for where the business is heading</li>
+            <li>Work through decisions too sensitive or complex to think through alone</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── About ─── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo-wrap fade-in">
+          <img
+            class="about-photo"
+            src="images/amy.jpg"
+            alt="Amy Wu"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="about-photo-placeholder" style="display:none;">Amy Wu</div>
+        </div>
+        <div class="about-text fade-in">
+          <p class="eyebrow">About Me</p>
+          <h2>I help tech professionals renew their identity and rewrite their story.</h2>
+          <p>
+            For over a decade, I led engineering teams at LinkedIn and Instacart — from building a B2B product into a billion-dollar business to driving double-digit growth with 50+ engineers. My career has spanned engineering leadership, organizational design, and business strategy across pre-IPO hypergrowth and public-company scale.
+          </p>
+          <p>
+            Then I did the thing I now help others do: I walked away from a well-defined lane. I left an executive role to build something new — because I realized my identity had become inseparable from my title, and I wanted to find out who I was beyond it. That decision, and the disorientation that came with it, is what makes me a better coach.
+          </p>
+          <p>
+            Along the way, I was promoted five times in ten years — while raising two children and navigating the reality of being a woman and minority leader in rooms where I was often the only one. I know what it takes to lead through uncertainty, grow without burning out, and redefine what success looks like when the old definition stops fitting. That experience is the foundation of how I coach.
+          </p>
+          <div class="about-badge-strip">
+            <p class="about-logos-label">Formerly at</p>
+            <div class="about-company-logos">
+              <img src="images/linkedin.png" alt="LinkedIn" />
+              <img src="images/instacart.png" alt="Instacart" />
+              <img src="images/purdue.png" alt="Purdue University" />
+            </div>
+            <div class="about-cred-tags">
+              <span class="cred-tag">Engineering Director, Instacart</span>
+              <span class="cred-tag">Engineering Lead, LinkedIn</span>
+              <span class="cred-tag">10+ Years Leadership Experience</span>
+            </div>
+          </div>
+          <a class="btn btn-outline" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a Free Clarity Call →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Testimonials ─── -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="eyebrow">In Their Words</p>
+        <h2>What clients say</h2>
+        <p>From engineering leaders, managers, and founders who've done the work.</p>
+        <div class="divider" style="background:rgba(150,115,56,0.5)"></div>
+      </div>
+    </div>
+    <div class="testimonial-track-wrap">
+      <div class="testimonial-track" id="testimonialTrack">
+        <!-- Set 1 — real testimonials -->
+        <div class="t-card">
+          <div class="t-quote">"Working with Chencheng has been transformative for both my career and my life."</div>
+          <div class="t-body">She supported me through major transitions—from IC to Tech Lead Manager to Senior Engineering Manager—helping me grow into a more confident, grounded, and effective leader. Her coaching helped me navigate new roles, build credibility with teams, and make clearer, more intentional decisions. Through our work together, I gained clarity, confidence, and a stronger sense of direction in both career and life.</div>
+          <div class="t-author">
+            <img src="images/christina.jpg" class="t-avatar-img" alt="Christina Xu" />
+            <div>
+              <div class="t-name">Christina Xu</div>
+              <div class="t-title">Senior Engineering Manager, Instacart</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-quote">"What sets her apart is how tailored her coaching is—she doesn't offer generic advice, but highly relevant, context-rich guidance specific to my situation."</div>
+          <div class="t-body">Whether I was navigating performance calibration, difficult stakeholder dynamics, or complex managerial decisions, Amy was able to help me navigate effectively. Amy doesn't rely on platitudes—she offers thoughtful, experience-based guidance that is both strategic and deeply supportive. If you're looking for a coach who will help you think clearly, navigate challenges with confidence, and grow with intention, Amy is that coach.</div>
+          <div class="t-author">
+            <img src="images/chang.jpg" class="t-avatar-img" alt="Chang Xu" />
+            <div>
+              <div class="t-name">Chang Xu</div>
+              <div class="t-title">Senior Principal Engineer/Manager, Roblox</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-quote">"The clarity and confidence I gained from her coaching continue to shape how I approach work, leadership, and life."</div>
+          <div class="t-body">Chencheng is an exceptional coach who has a true gift for helping people grow—both professionally and personally. Her approach consistently pushed me to stretch beyond my comfort zone while building real confidence along the way. What truly sets Chencheng apart is her ability to see potential in people and help them unlock it—one of the reasons I cofounded Leland, as she helped me see firsthand the value of coaching.</div>
+          <div class="t-author">
+            <img src="images/jiashuo.jpg" class="t-avatar-img" alt="Jiashuo Wang" />
+            <div>
+              <div class="t-name">Jiashuo Wang</div>
+              <div class="t-title">CoFounder, Leland</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-quote">"Working with Chencheng has been truly transformative."</div>
+          <div class="t-body">She brings exceptional clarity to complex situations and helps you see both the immediate path forward and the leader you're capable of becoming. Her coaching is deeply insightful, practical, and grounded in real leadership experience. She challenges you in the right ways while helping you build lasting confidence, clarity, and impact. I highly recommend Chencheng to anyone serious about growing into their next level of leadership and impact.</div>
+          <div class="t-author">
+            <img src="images/benji.jpg" class="t-avatar-img" alt="Benjamin Peyrot" />
+            <div>
+              <div class="t-name">Benjamin Peyrot</div>
+              <div class="t-title">Staff Software Engineer, Instacart</div>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="t-card">
+          <div class="t-quote">"Working with Chencheng has been transformative for both my career and my life."</div>
+          <div class="t-body">She supported me through major transitions—from IC to Tech Lead Manager to Senior Engineering Manager—helping me grow into a more confident, grounded, and effective leader. Her coaching helped me navigate new roles, build credibility with teams, and make clearer, more intentional decisions. Through our work together, I gained clarity, confidence, and a stronger sense of direction in both career and life.</div>
+          <div class="t-author">
+            <img src="images/christina.jpg" class="t-avatar-img" alt="Christina Xu" />
+            <div>
+              <div class="t-name">Christina Xu</div>
+              <div class="t-title">Senior Engineering Manager, Instacart</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-quote">"What sets her apart is how tailored her coaching is—she doesn't offer generic advice, but highly relevant, context-rich guidance specific to my situation."</div>
+          <div class="t-body">Whether I was navigating performance calibration, difficult stakeholder dynamics, or complex managerial decisions, Amy was able to help me navigate effectively. Amy doesn't rely on platitudes—she offers thoughtful, experience-based guidance that is both strategic and deeply supportive. If you're looking for a coach who will help you think clearly, navigate challenges with confidence, and grow with intention, Amy is that coach.</div>
+          <div class="t-author">
+            <img src="images/chang.jpg" class="t-avatar-img" alt="Chang Xu" />
+            <div>
+              <div class="t-name">Chang Xu</div>
+              <div class="t-title">Senior Principal Engineer/Manager, Roblox</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-quote">"The clarity and confidence I gained from her coaching continue to shape how I approach work, leadership, and life."</div>
+          <div class="t-body">Chencheng is an exceptional coach who has a true gift for helping people grow—both professionally and personally. Her approach consistently pushed me to stretch beyond my comfort zone while building real confidence along the way. What truly sets Chencheng apart is her ability to see potential in people and help them unlock it—one of the reasons I cofounded Leland, as she helped me see firsthand the value of coaching.</div>
+          <div class="t-author">
+            <img src="images/jiashuo.jpg" class="t-avatar-img" alt="Jiashuo Wang" />
+            <div>
+              <div class="t-name">Jiashuo Wang</div>
+              <div class="t-title">CoFounder, Leland</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-quote">"Working with Chencheng has been truly transformative."</div>
+          <div class="t-body">She brings exceptional clarity to complex situations and helps you see both the immediate path forward and the leader you're capable of becoming. Her coaching is deeply insightful, practical, and grounded in real leadership experience. She challenges you in the right ways while helping you build lasting confidence, clarity, and impact. I highly recommend Chencheng to anyone serious about growing into their next level of leadership and impact.</div>
+          <div class="t-author">
+            <img src="images/benji.jpg" class="t-avatar-img" alt="Benjamin Peyrot" />
+            <div>
+              <div class="t-name">Benjamin Peyrot</div>
+              <div class="t-title">Staff Software Engineer, Instacart</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Articles ─── -->
+  <section id="articles">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="eyebrow">Thinking Out Loud</p>
+        <h2>On leadership, identity, and clarity</h2>
+        <p>Practical thinking on leadership, identity, and navigating the AI era. Updated regularly on Substack.</p>
+        <div class="divider"></div>
+      </div>
+    </div><!-- end .container -->
+    <div class="article-track-wrap">
+      <div class="article-track">
+        <!-- Set 1 -->
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Leadership</span>
+              <span class="article-meta">5 min read</span>
+            </div>
+            <h3>The Smartest Person in the Room Is the Bottleneck</h3>
+            <p>Being the go-to problem solver feels like strength — until it becomes the thing holding your team back. Real leadership means making the room smarter.</p>
+            <div class="article-insight">"A leader's job isn't to be the smartest person in the room. It's to make the room smarter."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/the-smartest-person-in-the-room-is" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">AI</span>
+              <span class="article-meta">7 min read</span>
+            </div>
+            <h3>AI Won't Replace You. Your Lane Will.</h3>
+            <p>AI adoption happens in three phases — and the real risk isn't the technology, it's staying stuck in a narrow lane while everything around you shifts.</p>
+            <div class="article-insight">"The biggest threat isn't AI. It's clinging to an identity built around a lane that's disappearing."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/ai-wont-replace-you-your-lane-will" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Leadership</span>
+              <span class="article-meta">5 min read</span>
+            </div>
+            <h3>Being Assertive Without Being Aggressive</h3>
+            <p>Generic assertiveness advice rarely helps — this piece shows how to calibrate your presence by context: decisive with executives, open with your team.</p>
+            <div class="article-insight">"Real presence isn't louder—it's calibrated to context."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/being-assertive-without-being-aggressive" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Team Development</span>
+              <span class="article-meta">6 min read</span>
+            </div>
+            <h3>The Hidden Scoreboard of Engineering Management</h3>
+            <p>New engineering managers often miss promotions because they're measuring the wrong thing — learn what management success actually looks like.</p>
+            <div class="article-insight">"Your team's growth is your scoreboard, not your personal output."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/the-hidden-scoreboard-of-engineering" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Career</span>
+              <span class="article-meta">4 min read</span>
+            </div>
+            <h3>From Victim to Agency</h3>
+            <p>There's a difference between feeling victimized and staying stuck in that story — three practical mental shifts to reclaim agency.</p>
+            <div class="article-insight">"Acknowledging difficulty is not the same as staying stuck in it."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/from-victim-to-agency" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Career</span>
+              <span class="article-meta">6 min read</span>
+            </div>
+            <h3>Your Career Deserves a More Frequent Check-In</h3>
+            <p>More doors are open than ever — a regular check-in helps you find them by reassessing your skills, values, and what the market demands.</p>
+            <div class="article-insight">"Where most people saw doors closing, she saw new ones opening."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/your-career-deserves-a-more-frequent" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Leadership</span>
+              <span class="article-meta">5 min read</span>
+            </div>
+            <h3>The Smartest Person in the Room Is the Bottleneck</h3>
+            <p>Being the go-to problem solver feels like strength — until it becomes the thing holding your team back. Real leadership means making the room smarter.</p>
+            <div class="article-insight">"A leader's job isn't to be the smartest person in the room. It's to make the room smarter."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/the-smartest-person-in-the-room-is" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">AI</span>
+              <span class="article-meta">7 min read</span>
+            </div>
+            <h3>AI Won't Replace You. Your Lane Will.</h3>
+            <p>AI adoption happens in three phases — and the real risk isn't the technology, it's staying stuck in a narrow lane while everything around you shifts.</p>
+            <div class="article-insight">"The biggest threat isn't AI. It's clinging to an identity built around a lane that's disappearing."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/ai-wont-replace-you-your-lane-will" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Leadership</span>
+              <span class="article-meta">5 min read</span>
+            </div>
+            <h3>Being Assertive Without Being Aggressive</h3>
+            <p>Generic assertiveness advice rarely helps — this piece shows how to calibrate your presence by context: decisive with executives, open with your team.</p>
+            <div class="article-insight">"Real presence isn't louder—it's calibrated to context."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/being-assertive-without-being-aggressive" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Team Development</span>
+              <span class="article-meta">6 min read</span>
+            </div>
+            <h3>The Hidden Scoreboard of Engineering Management</h3>
+            <p>New engineering managers often miss promotions because they're measuring the wrong thing — learn what management success actually looks like.</p>
+            <div class="article-insight">"Your team's growth is your scoreboard, not your personal output."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/the-hidden-scoreboard-of-engineering" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Career</span>
+              <span class="article-meta">4 min read</span>
+            </div>
+            <h3>From Victim to Agency</h3>
+            <p>There's a difference between feeling victimized and staying stuck in that story — three practical mental shifts to reclaim agency.</p>
+            <div class="article-insight">"Acknowledging difficulty is not the same as staying stuck in it."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/from-victim-to-agency" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-body">
+            <div class="article-tag-row">
+              <span class="article-tag">Career</span>
+              <span class="article-meta">6 min read</span>
+            </div>
+            <h3>Your Career Deserves a More Frequent Check-In</h3>
+            <p>More doors are open than ever — a regular check-in helps you find them by reassessing your skills, values, and what the market demands.</p>
+            <div class="article-insight">"Where most people saw doors closing, she saw new ones opening."</div>
+            <a class="article-link" href="https://cc12170503.substack.com/p/your-career-deserves-a-more-frequent" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="text-align:center; margin-top:2.5rem;">
+      <a class="btn" href="https://cc12170503.substack.com/" target="_blank" rel="noopener">Follow on Substack →</a>
+      <p style="margin-top:0.85rem; font-size:0.9rem; color:var(--text-light);">Free to read. No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- ─── Final CTA ─── -->
+  <section id="cta">
+    <p class="eyebrow">Something Resonate?</p>
+    <h2>If an article or my experience feels relevant to where you are, send me a message.</h2>
+    <button class="btn btn-light" onclick="openContact()">Send a Message →</button>
+    <p class="cta-note">I read every message and reply within 1–2 business days.</p>
+    <p class="cta-note" style="margin-top:1.25rem;">Or skip the inbox — <a href="https://calendly.com/chenchengwu88/30min" target="_blank" rel="noopener" style="color:var(--brown-light,#c9a96e); text-decoration:underline; text-underline-offset:3px;">book a free 30-min clarity call</a>.</p>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="footer-badge">
+      <a href="https://www.credly.com/badges/77ad2fd2-978f-497a-91d1-247b42c8bcc8/public_url" target="_blank" rel="noopener">
+        <img src="images/nlp-practitioner.png" alt="PNLP Certified Practitioner of Neuro-Linguistic Programming" />
+      </a>
+    </div>
+    <div class="footer-linkedin">
+      <a href="https://www.linkedin.com/in/chenchengwu/" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    <p class="footer-copy">© 2026 Amy (Chencheng) Wu Coaching. All rights reserved.</p>
+  </footer>
+
+  <!-- ─── Newsletter Modal ─── -->
+  <div class="modal-overlay" id="newsletterModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeNewsletter()" aria-label="Close">✕</button>
+      <p class="eyebrow" style="margin-bottom:0.5rem;">Stay in the Loop</p>
+      <h2 style="font-size:1.6rem; margin-bottom:0.75rem; color:var(--charcoal);">Thinking that helps you lead.</h2>
+      <p style="font-size:0.95rem; color:var(--text-light); margin-bottom:1.5rem; line-height:1.75;">Articles on clarity, leadership, and navigating uncertainty — delivered when it's worth your time.</p>
+      <iframe src="https://cc12170503.substack.com/embed" width="100%" height="200" style="border:none; background:transparent;" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+
+  <!-- ─── Contact Modal ─── -->
+  <!-- ACTION: Replace YOUR_FORM_ID below with your Formspree form ID from formspree.io -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeContact()" aria-label="Close">✕</button>
+      <p class="eyebrow" style="margin-bottom:0.5rem;">Let's Talk</p>
+      <h2 style="font-size:1.5rem; margin-bottom:0.5rem; color:var(--charcoal);">Tell me a bit about where you are.</h2>
+      <p style="font-size:0.9rem; color:var(--text-light); margin-bottom:1.5rem; line-height:1.7;">I'll follow up within 1–2 business days.</p>
+      <form action="https://formspree.io/f/xdalygwy" method="POST" class="contact-form">
+        <div class="form-row">
+          <input type="text"  name="name"  placeholder="Your name"  required />
+          <input type="email" name="email" placeholder="Your email" required />
+        </div>
+        <select name="challenge" required>
+          <option value="" disabled selected>What's your primary challenge?</option>
+          <option value="leadership">Engineering leadership &amp; team building</option>
+          <option value="belonging">Being the only woman or minority in the room</option>
+          <option value="clarity">Feeling stuck, anxious, or unclear on direction</option>
+          <option value="transition">Career transition or promotion decisions</option>
+          <option value="other">Something else</option>
+        </select>
+        <textarea name="message" rows="4" placeholder="Briefly describe what's going on and what you're hoping for..." required></textarea>
+        <button type="submit" class="btn" style="width:100%; margin-top:0.25rem;">Send Message →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ─── Scripts ─── -->
+  <script>
+    /* ── Navbar scroll behavior ── */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ── Mobile menu ── */
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', closeMobile);
+    function closeMobile() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    /* ── Fade-in on scroll ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    /* ── Newsletter modal ── */
+    function openNewsletter() {
+      document.getElementById('newsletterModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNewsletter() {
+      document.getElementById('newsletterModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('newsletterModal').addEventListener('click', function(e) {
+      if (e.target === this) closeNewsletter();
+    });
+
+    /* ── Contact modal ── */
+    function openContact() {
+      document.getElementById('contactModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeContact() {
+      document.getElementById('contactModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+      if (e.target === this) closeContact();
+    });
+  </script>
+
+</body>
+</html>
