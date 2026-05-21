@@ -279,17 +279,13 @@
       .container { padding: 0 1.25rem; }
     }
 
-    /* Community waitlist band */
-    #community { background: var(--cream); text-align: center; }
-    #community h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); color: var(--charcoal); margin-bottom: 1rem; }
-    #community h2 em { font-style: italic; color: var(--brown); }
-    .community-lead { max-width: 38rem; margin: 0 auto 2rem; color: var(--text-light); font-size: 1.05rem; line-height: 1.8; }
-    .waitlist-form { display: flex; gap: 0.75rem; max-width: 32rem; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
-    .waitlist-form input[type="email"] { flex: 1 1 16rem; padding: 0.85rem 1.1rem; border: 1.5px solid var(--gray-mid); border-radius: 2px; font-family: var(--sans); font-size: 0.95rem; color: var(--text); background: var(--white); }
+    /* Final CTA — community */
+    .waitlist-form { display: flex; gap: 0.6rem; max-width: 26rem; margin: 1.5rem auto 0; flex-wrap: wrap; justify-content: center; }
+    .waitlist-form input[type="email"] { flex: 1 1 14rem; padding: 0.7rem 0.9rem; border: 1.5px solid rgba(255,255,255,0.25); border-radius: 2px; font-family: var(--sans); font-size: 0.9rem; color: var(--charcoal); background: var(--white); }
     .waitlist-form input[type="email"]:focus { outline: none; border-color: var(--brown); }
     .waitlist-form button { white-space: nowrap; }
-    .waitlist-note { font-size: 0.85rem; color: var(--text-light); margin-top: 1rem; }
-    .waitlist-thanks { display: none; color: var(--brown-dark); font-size: 1.05rem; margin-top: 1rem; font-family: var(--serif); font-style: italic; }
+    .waitlist-note { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-top: 0.85rem; }
+    .waitlist-thanks { display: none; color: var(--brown); font-size: 1rem; margin-top: 0.85rem; font-family: var(--serif); font-style: italic; }
   </style>
 </head>
 
@@ -486,21 +482,19 @@
     </div>
   </section>
 
-  <!-- ─── Community waitlist ─── -->
-  <section id="community">
-    <div class="container">
-      <p class="eyebrow">The Community</p>
-      <h2>Build Your MOAT <em>Together</em></h2>
-      <p class="community-lead">A cohort for tech leaders building a sustainable, one-person AI-native business &mdash; with peers making the same move.</p>
-      <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/xdalygwy" method="POST">
-        <input type="hidden" name="_subject" value="New waitlist signup — Build Your MOAT Together" />
-        <input type="hidden" name="interest" value="Build Your MOAT Together — community waitlist" />
-        <input type="email" name="email" placeholder="Your email" required aria-label="Your email" />
-        <button type="submit" class="btn">Join the waitlist &rarr;</button>
-      </form>
-      <p class="waitlist-note">Cohorts open soon. Add your name and I'll be in touch.</p>
-      <p class="waitlist-thanks" id="waitlistThanks">Thank you &mdash; you're on the list. I'll be in touch.</p>
-    </div>
+  <!-- ─── Final CTA ─── -->
+  <section id="cta">
+    <p class="eyebrow">Community</p>
+    <h2>BuildTogether</h2>
+    <p>A community for tech leaders exploring a sustainable AI-native business of their own &mdash; solo or a small team. Exchange notes with peers, and learn from those who've walked the path.</p>
+    <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/xdalygwy" method="POST">
+      <input type="hidden" name="_subject" value="New waitlist signup — BuildTogether" />
+      <input type="hidden" name="interest" value="BuildTogether — community waitlist" />
+      <input type="email" name="email" placeholder="Your email" required aria-label="Your email" />
+      <button type="submit" class="btn btn-light">Join the waitlist &rarr;</button>
+    </form>
+    <p class="waitlist-note" id="waitlistNote">Cohorts open soon &mdash; I'll be in touch.</p>
+    <p class="waitlist-thanks" id="waitlistThanks">Thank you &mdash; you're on the list. I'll be in touch.</p>
   </section>
   <script>
     (function () {
@@ -517,7 +511,7 @@
         }).then(function (r) {
           if (r.ok) {
             form.style.display = 'none';
-            document.querySelector('#community .waitlist-note').style.display = 'none';
+            document.getElementById('waitlistNote').style.display = 'none';
             document.getElementById('waitlistThanks').style.display = 'block';
           } else {
             btn.disabled = false;
@@ -530,33 +524,6 @@
       });
     })();
   </script>
-
-  <!-- ─── Final CTA ─── -->
-  <section id="cta">
-    <p class="eyebrow">Let's Talk</p>
-    <h2>Clarity starts with a <em>conversation</em>.</h2>
-    <p>You don't need more advice. You need help revealing what you can't see from inside it.</p>
-
-    <div class="cta-timeline">
-      <div class="cta-timeline-step">
-        <span class="cta-step-num">1</span>
-        <h4>Clarity Call</h4>
-        <p>Free. 30 minutes. Let's decide the fit.</p>
-      </div>
-      <div class="cta-timeline-step">
-        <span class="cta-step-num">2</span>
-        <h4>Design the Fit</h4>
-        <p>Around your situation. 12 or 24 weeks.</p>
-      </div>
-      <div class="cta-timeline-step">
-        <span class="cta-step-num">3</span>
-        <h4>The Work</h4>
-        <p>Real situations. Real talk. Your chair.</p>
-      </div>
-    </div>
-
-    <a class="btn btn-light" href="https://calendly.com/chenchengwu88/30min" target="_blank">Book a strategy session</a>
-  </section>
 
   <footer>
     <div class="footer-row">
