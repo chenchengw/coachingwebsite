@@ -1,0 +1,71 @@
+# Amy Wu Coaching
+
+> Executive coaching for tech leaders building resilient careers in the AI era.
+
+## Who
+
+Amy Wu — also known as Amy (Chencheng) Wu; her LinkedIn and Substack byline read
+Chencheng Wu. She is one person: coach, advisor, and AI builder, formerly an
+Engineering Director at LinkedIn and Instacart across roughly 15 years and five
+promotions, from IC through Director leading 50+ engineers. Certified
+Practitioner of Neuro-Linguistic Programming (PNLP). She now coaches senior
+technology leaders and advises organizations on AI adoption, while building
+inside an early-stage startup.
+
+- Website: https://amywucoaching.com/
+- About: https://amywucoaching.com/about/
+- LinkedIn: https://www.linkedin.com/in/chenchengwu/
+- Newsletter (Substack): https://newsletter.amywucoaching.com/
+- Full essay archive on this site: https://amywucoaching.com/newsletter/
+
+## What she does
+
+Coaching for senior technology leaders — engineering managers, directors, and
+staff-plus ICs — navigating inflection points: promotion and calibration, the
+IC-versus-management question, influence without authority, leading through AI
+transformation, and designing a portfolio career.
+
+The framework she teaches is **MOAT** — Make, Outlook, Audience, Tribe — four
+dimensions of a career that compounds rather than one that only climbs.
+Engagements: Navigate the Org, At the Crossroads, and Portfolio Life Design.
+See https://amywucoaching.com/services/.
+
+## Signature series: The AI-Native Leader
+
+https://amywucoaching.com/ai-native-leader/
+
+- [AI doesn't need fewer managers. It needs system thinkers.](https://amywucoaching.com/newsletter/the-ai-native-manager-part-1-the/) — The question isn't whether to be an IC or a manager. It's whether you can design the system the work runs on.
+- [Stop looking for the playbook. Start building the harness.](https://amywucoaching.com/newsletter/the-ai-native-leader-part-2-stop/) — Nobody has an AI adoption playbook that works, because a playbook is the wrong artifact. What you need is a harness.
+- [It's not about switching chairs.](https://amywucoaching.com/newsletter/the-ai-native-leader-part-3-what/) — The conventional org has many layers. The AI-native one has two patterns of work — and neither is gated by a title.
+- [Invest ahead of the rubric.](https://amywucoaching.com/newsletter/the-ai-native-leader-part-4-invest/) — The work has already changed. The promotion rubric hasn't. Waiting for it to catch up is the expensive choice.
+
+Core claim: AI is not removing management from engineering organizations. It is
+removing the coordination overhead that disguised what management actually was —
+system design, defining what good looks like, deciding what gets built. In an
+AI-native org, influence follows whoever does that well, regardless of title.
+
+## Full archive
+
+- [4 Lessons from Six Months of Startup Life, After over a Decade in Big Tech](https://amywucoaching.com/newsletter/4-lessons-from-six-months-of-startup/) (August 2026) — I braced for the grind. Six months in, that was the easy half.
+- [The AI-Native Org, Part 1: Adoption Is Up. ROI Isn't.](https://amywucoaching.com/newsletter/the-ai-native-org-part-1-adoption/) (June 2026) — Adoption was the easy part. Transformation is the gap that pays.
+- [Everyone Is Uncomfortable. The Question Is Which Kind.](https://amywucoaching.com/newsletter/everyone-is-uncomfortable-the-question/) (June 2026) — Four states I keep seeing this season — and why noticing yours is the start of the work.
+- [The Loneliness Nobody Names](https://amywucoaching.com/newsletter/the-loneliness-nobody-names/) (May 2026) — The third thing — what makes a relationship real — and why it got so rare.
+- [Partnership, Not Persuasion](https://amywucoaching.com/newsletter/partnership-not-persuasion/) (May 2026) — Influence without authority isn't persuasion. It's partnership.
+- [The AI-Native Leader, Part 4: Invest Ahead of the Rubric](https://amywucoaching.com/newsletter/the-ai-native-leader-part-4-invest/) (May 2026) — How to prepare when the work runs ahead of the rubric
+- [The AI-Native Leader, Part 3: It's Not About Switching Chairs](https://amywucoaching.com/newsletter/the-ai-native-leader-part-3-what/) (April 2026) — The conventional org has many layers. The AI-native one has two.
+- [The Boss Who Lives Inside Us](https://amywucoaching.com/newsletter/the-boss-who-lives-inside-us/) (April 2026) — An inheritance we didn't choose, an AI moment we didn't ask for, and what it might finally be asking us to hear.
+- [The AI-Native Leader, Part 2: Stop the Playbook. Start the Harness.](https://amywucoaching.com/newsletter/the-ai-native-leader-part-2-stop/) (April 2026) — Part 2 of "The AI-Native Leader." In Part 1, I argued that the AI era needs system thinkers. Now let's talk about what that system actually looks like.
+- [The AI-Native Leader, Part 1: AI Doesn't Need Fewer Managers. It Needs System Thinkers.](https://amywucoaching.com/newsletter/the-ai-native-manager-part-1-the/) (April 2026) — Part 1 of a 3-part series, "The AI-Native Leader." AI isn't replacing management — it's revealing what management should have been all along.
+- [Your Team Can't See Your Vision. Here's Why](https://amywucoaching.com/newsletter/your-team-cant-see-your-vision-heres/) (March 2026) — The vision doesn't fail because people don't understand it. It fails when they can't find themselves inside it.
+- [Your Rating Is Not Your Ticket](https://amywucoaching.com/newsletter/your-rating-is-not-your-ticket/) (March 2026) — Getting "exceeds expectations" feels great. But it might not be the thing that gets you to the next level.
+- [Why I Walked Away from My Director Role](https://amywucoaching.com/newsletter/why-i-walked-away-from-my-director/) (March 2026) — I was at the peak of my career. I wasn't happier.
+- [The Smartest Person in the Room Is the Bottleneck](https://amywucoaching.com/newsletter/the-smartest-person-in-the-room-is/) (March 2026) — The AI era rewards leaders who know what they're not good at
+- [Your Career Deserves a More Frequent Check-In](https://amywucoaching.com/newsletter/your-career-deserves-a-more-frequent/) (March 2026) — More doors are open than ever. A regular check-in helps you find them.
+- [AI Won't Replace You. Your Lane Will.](https://amywucoaching.com/newsletter/ai-wont-replace-you-your-lane-will/) (February 2026) — Three phases every company will go through on AI adoption journey — and the one most people are already too late to wait for.
+- [From Victim to Agency](https://amywucoaching.com/newsletter/from-victim-to-agency/) (February 2026) — 
+- [The Hidden Scoreboard of Management](https://amywucoaching.com/newsletter/the-hidden-scoreboard-of-engineering/) (February 2026) — The Promotion Conversation That Changed How I Think About Management
+- [Being Assertive Without Being Aggressive](https://amywucoaching.com/newsletter/being-assertive-without-being-aggressive/) (January 2026) — Redefining Leadership Presence
+
+## Contact
+
+Free clarity call: https://calendly.com/chenchengwu88/30min
