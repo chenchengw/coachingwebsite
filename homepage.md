@@ -136,7 +136,7 @@ I coach from pattern recognition — not frameworks or clichés. When you descri
 - Engineering Lead, LinkedIn
 - 10+ years leading teams of 50+ engineers
 - Promoted 5x in 10 years across two major tech companies
-- ACC credential (in progress) | iNLP Practitioner
+- ACC credential (in progress) | iNLP Master Practitioner
 - Mentored dozens of women in tech through career transitions and leadership growth
 - Founded and led women-in-tech communities
 
