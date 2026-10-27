@@ -1,6 +1,6 @@
-# Amy Wu Coaching
+# Amy Wu Coaching & Advisory
 
-> Executive coaching for tech leaders building resilient careers in the AI era.
+> Executive coaching for engineers and engineering leaders building resilient careers in the AI era.
 
 ## Who
 
@@ -20,14 +20,22 @@ inside an early-stage startup.
 
 ## What she does
 
-Coaching for senior technology leaders — engineering managers, directors, and
-staff-plus ICs — navigating inflection points: promotion and calibration, the
-IC-versus-management question, influence without authority, leading through AI
-transformation, and designing a portfolio career.
+Coaching for engineers and engineering leaders — senior ICs, engineering
+managers, and directors, mostly in big tech — keeping their footing through
+reorgs, new managers, new companies, and acquisitions, while building toward what
+comes next on their own terms: relocation, a side project that becomes a
+business, a career that doesn't depend on one employer. Topics include rating and
+calibration, the IC-versus-management question, influence without authority, and
+leading through AI transformation.
 
 The framework she teaches is **MOAT** — Make, Outlook, Audience, Tribe — four
 dimensions of a career that compounds rather than one that only climbs.
-Engagements: Navigate the Org, At the Crossroads, and Portfolio Life Design.
+Engagements: The Next Move (choosing the next role by working backward from
+where you want to end up, then landing the offer); Navigate the Org (influence
+inside your current org); and Scale the Team,
+ongoing advisory for first-time managers, engineering leaders, and founders whose
+teams are growing fast (org design, delegation, first managers, how work splits
+between people and AI; not outsourced management).
 See https://amywucoaching.com/services/.
 
 ## Signature series: The AI-Native Leader
@@ -46,6 +54,11 @@ AI-native org, influence follows whoever does that well, regardless of title.
 
 ## Full archive
 
+- [What Management Taught Me](https://amywucoaching.com/newsletter/what-management-taught-me/) (October 2026) — It taught me how to make bets that weren’t mine alone.
+- [Before You Leave Big Tech for a Startup](https://amywucoaching.com/newsletter/before-you-leave-big-tech-for-a-startup/) (October 2026) — A map of the trade-offs, and a question only you can answer
+- [The AI-Native Org, Part 3: The 24/7 Agent Is Here. Don't Marry the First One.](https://amywucoaching.com/newsletter/the-ai-native-org-part-3-the-247/) (September 2026) — Always-on agents are here. Use one today. Don't let it keep your memory.
+- [The AI-Native Org, Part 2: First the Problem, Then the Team](https://amywucoaching.com/newsletter/the-ai-native-org-part-2-first-the/) (September 2026) — Humans and agents in one pod — organized by the problem, not by function.
+- [The Era of the General Manager](https://amywucoaching.com/newsletter/the-era-of-the-general-manager/) (August 2026) — Your title still exists. It no longer describes what you do.
 - [4 Lessons from Six Months of Startup Life, After over a Decade in Big Tech](https://amywucoaching.com/newsletter/4-lessons-from-six-months-of-startup/) (August 2026) — I braced for the grind. Six months in, that was the easy half.
 - [The AI-Native Org, Part 1: Adoption Is Up. ROI Isn't.](https://amywucoaching.com/newsletter/the-ai-native-org-part-1-adoption/) (June 2026) — Adoption was the easy part. Transformation is the gap that pays.
 - [Everyone Is Uncomfortable. The Question Is Which Kind.](https://amywucoaching.com/newsletter/everyone-is-uncomfortable-the-question/) (June 2026) — Four states I keep seeing this season — and why noticing yours is the start of the work.
