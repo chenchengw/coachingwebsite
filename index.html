@@ -423,7 +423,7 @@
         </div>
         <div class="why-item fade-in">
           <h3>Clients through real moves</h3>
-          <p>New companies, new managers, acquisitions, job searches. Clients have landed roles at OpenAI and Roblox.</p>
+          <p>New companies, new managers, acquisitions, job searches. Clients have landed roles at OpenAI, Roblox, and Fireworks AI.</p>
         </div>
       </div>
     </div>
@@ -445,6 +445,17 @@
           <cite>
             <span class="t-name">Christina Xu</span>
             <span class="t-title">Senior Engineering Manager, Instacart</span>
+          </cite>
+        </div>
+
+        <div class="testimonial-slide">
+          <blockquote>
+            <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
+            <p>Hiring Amy as my coach was one of the best decisions I made in the past year &mdash; it was truly a life changer. Amy understands how senior decision-makers think. She helped me frame my experience around the judgment behind my work, not just the execution. That set me apart in interviews and, with her guidance, I negotiated a package well beyond what I'd initially planned to ask for. When I transitioned from big tech to a fast-moving startup, Amy helped me understand leadership dynamics, pick my battles deliberately, and put my energy where it had the most impact. Amy is the coach I'd want in my corner.</p>
+          </blockquote>
+          <cite>
+            <span class="t-name">Bo Xu</span>
+            <span class="t-title">Member of Technical Staff, Fireworks AI</span>
           </cite>
         </div>
 
@@ -484,22 +495,11 @@
         <div class="testimonial-slide">
           <blockquote>
             <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
-            <p>The clarity and confidence I gained from her coaching continue to shape how I approach work, leadership, and life. Her approach consistently pushed me to stretch beyond my comfort zone while building real confidence along the way. What truly sets her apart is her ability to see potential in people and help them unlock it &mdash; one of the reasons I cofounded Leland.</p>
+            <p>The clarity and confidence I gained from Amy's coaching continue to shape how I approach work, leadership, and life. She consistently pushed me to stretch beyond my comfort zone while building real confidence along the way. What truly sets her apart is her ability to see potential in people and help them grow into it. Coaches like Amy are one of the reasons I cofounded Leland.</p>
           </blockquote>
           <cite>
             <span class="t-name">Jiashuo Wang</span>
-            <span class="t-title">CoFounder, Leland</span>
-          </cite>
-        </div>
-
-        <div class="testimonial-slide">
-          <blockquote>
-            <div class="t-open-quote" aria-hidden="true">&ldquo;</div>
-            <p>Working with Amy has been truly transformative. She brings exceptional clarity to complex situations and helps you see both the immediate path forward and the leader you're capable of becoming. Her coaching is deeply insightful, practical, and grounded in real leadership experience. She challenges you in the right ways while building lasting confidence and impact.</p>
-          </blockquote>
-          <cite>
-            <span class="t-name">Benjamin Peyrot</span>
-            <span class="t-title">Staff Software Engineer, Instacart</span>
+            <span class="t-title">Member of Technical Staff, OpenAI &middot; Co-founder, Leland</span>
           </cite>
         </div>
       </div>
@@ -514,8 +514,7 @@
           <button class="t-dot" aria-label="Go to testimonial 3"></button>
           <button class="t-dot" aria-label="Go to testimonial 4"></button>
           <button class="t-dot" aria-label="Go to testimonial 5"></button>
-          <button class="t-dot" aria-label="Go to testimonial 6"></button>
-        </div>
+          <button class="t-dot" aria-label="Go to testimonial 6"></button>        </div>
         <button class="t-nav-arrow" id="tNext" aria-label="Next testimonial">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </button>
@@ -582,22 +581,37 @@
       slides.forEach((s, i) => s.classList.toggle('active', i === idx));
       dots.forEach((d, i) => d.classList.toggle('active', i === idx));
     }
+    // Auto-rotate slowly enough to read a ~100-word quote; pause while the
+    // reader hovers or focuses the carousel; restart the clock on manual nav.
+    const ROTATE_MS = 20000;
+    let rotateTimer = null;
+    function startRotate() {
+      clearInterval(rotateTimer);
+      rotateTimer = setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }, ROTATE_MS);
+    }
+    function stopRotate() { clearInterval(rotateTimer); }
     tPrev.addEventListener('click', () => {
       currentSlide = (currentSlide - 1 + slides.length) % slides.length;
       showSlide(currentSlide);
+      startRotate();
     });
     tNext.addEventListener('click', () => {
       currentSlide = (currentSlide + 1) % slides.length;
       showSlide(currentSlide);
+      startRotate();
     });
     dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => { currentSlide = i; showSlide(currentSlide); });
+      dot.addEventListener('click', () => { currentSlide = i; showSlide(currentSlide); startRotate(); });
     });
-    // Auto-rotate every 8 seconds
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }, 8000);
+    const carouselSection = document.getElementById('testimonials');
+    carouselSection.addEventListener('mouseenter', stopRotate);
+    carouselSection.addEventListener('mouseleave', startRotate);
+    carouselSection.addEventListener('focusin', stopRotate);
+    carouselSection.addEventListener('focusout', startRotate);
+    startRotate();
 
     // Fade-in on scroll
     const observer = new IntersectionObserver((entries) => {

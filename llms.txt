@@ -31,7 +31,8 @@ leading through AI transformation.
 The framework she teaches is **MOAT** — Make, Outlook, Audience, Tribe — four
 dimensions of a career that compounds rather than one that only climbs.
 Engagements: The Next Move (choosing the next role by working backward from
-where you want to end up, then landing the offer); Navigate the Org (influence
+where you want to end up, then landing the offer; clients have landed roles at
+OpenAI, Roblox, and Fireworks AI); Navigate the Org (influence
 inside your current org); and Scale the Team,
 ongoing advisory for first-time managers, engineering leaders, and founders whose
 teams are growing fast (org design, delegation, first managers, how work splits
